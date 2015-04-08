@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/combobox.css" />
+    <link rel="stylesheet" href="css/window.css" />
+    <link rel="stylesheet" href="css/easyui.css" />
+</head>
+<body>
+<div style="height: 20px;width: 2000px;overflow: hidden;">
+<input id="cc" name="aaa">
+</div>
+<input id="win">
+<script src="js/jquery-1.11.1.min.js"></script>
+<!--<script src="js/jquery.parser.js"></script>-->
+<script src="js/jquery.bCombobox2-0-0.js"></script>
+<!--<script src="js/jquery.window.js"></script>-->
+<!--<script src="js/jquery.easyui.min.js"></script>-->
+<script>
+
+    $('#cc').combobox({
+        data:[{id:1,text:"a"}],
+       // url:'combobox_data.json',
+        valueField:'id',
+        textField:'text'
+    });
+
+
+
+//    $('#win').window({
+//        width:600,
+//        height:400,
+//        modal:true
+//    });
+
+</script>
+</body>
+</html>
