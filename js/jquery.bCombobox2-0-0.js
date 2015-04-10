@@ -158,7 +158,7 @@
         state.data = opts.loadFilter.call(target, data);
         state.groups = [];
         data = state.data;
-        debugger;
+
         var selected = $(target).combobox('getValues');
         var dd = [];
         var group = undefined;
@@ -184,7 +184,7 @@
             dd.push('<div id="' + (state.itemIdPrefix+'_'+i) + '" class="' + cls + '">');
            // dd.push(opts.formatter ? opts.formatter.call(target, row) : s);
             dd.push('</div>');
-            debugger;
+
 
 //			if (item['selected']){
 //				(function(){
@@ -310,7 +310,6 @@
      * create the component
      */
     function create(target){
-        //debugger;
         var state = $.data(target, 'combobox');
         var opts = state.options;
 
@@ -318,10 +317,33 @@
         state.itemIdPrefix = '_easyui_combobox_i' + COMBOBOX_SERNO;
         state.groupIdPrefix = '_easyui_combobox_g' + COMBOBOX_SERNO;
 
-        $(target).addClass('combobox-f');
+      //  $(target).addClass('combobox-f');
+        var tempH=$(target).outerHeight();
+        var tempW=$(target).outerWidth();
 
-        $('<div style="height: 300px;width: 400px;background-color: #ff0000;"></div>').css("position","absolute").offset($(target).offset()).appendTo($(document.body));
 
+        var tempOffset={
+            left:$(target).offset().left,
+            top:$(target).offset().top+tempH+2
+        }
+        //$(target).after('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"></span>').addClass("combo");
+
+        $('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"><span class="textbox-addon" style="position: absolute;right: 0px;top:0px;"><a class="combo-arrow" style="width: 18px;height: 22px;display: inline-block;"></a></span></span>').addClass("combo").insertAfter($(target));
+
+        $('<div class="combo-panel combo-panel-closed" style="display: none;height: 300px;width: 400px;background-color: #ff0000;"></div>').css("position","absolute").offset(tempOffset).appendTo($(document.body));
+        $(target).hide();
+
+        $(".textbox-addon").bind("click",function(){
+            if($(".combo-panel").hasClass("combo-panel-closed"))
+            {
+                $(".combo-panel").removeClass("combo-panel-closed").show();
+            }
+            else
+            {
+                $(".combo-panel").addClass("combo-panel-closed").hide();
+            }
+
+        });
 
 
 

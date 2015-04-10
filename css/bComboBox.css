@@ -1,36 +1,16 @@
-li
-{
-    float: left;
-    white-space:nowrap;
-    list-style: none;
-}
-.bui-sel-item
-{
-    display: block;
-    width: auto;
-    height: 24px;
-    line-height: 24px;
-    padding: 0 7px;
-    text-decoration: none;
-    color: #666;
+.combo {
+    display: inline-block;
+    white-space: nowrap;
+    margin: 0;
+    padding: 0;
+    border-width: 1px;
+    border-style: solid;
     overflow: hidden;
+    vertical-align: middle;
 }
-.bui-selText
+.combo-arrow
 {
-    background-color: #ffffff;
-    width: auto;
-    height: 32px;
-    line-height: 32px;
-    padding: 0 30px 0 7px;
-    color: #666;
-    cursor: pointer;
-    overflow: hidden;
-    background-image: url("../images/selDown.png");
+   background-image:url('images/selDown.png');
     background-repeat: no-repeat;
-    background-position: 260px 5px;
-}
-.bui-selList
-{
-    max-width: 301px;
-    background-color: #ffffff;
+    background-position: center center;
 }
