@@ -10,7 +10,11 @@
 <body>
 
 <input id="cc" name="aaa">
-<input id="win">
+
+
+
+<input id="cc1" name="aaa">
+
 <script src="js/jquery-1.11.1.min.js"></script>
 <!--<script src="js/jquery.parser.js"></script>-->
 <script src="js/jquery.bCombobox2-0-0.js"></script>
@@ -19,11 +23,20 @@
 <script>
 
     $('#cc').combobox({
-        data:[{id:1,text:"a"},{id:1,text:"b"}],
+        data:[{id:1,text:"a"},{id:2,text:"b"}],
        // url:'combobox_data.json',
         valueField:'id',
         textField:'text'
     });
+    $('#cc').combobox("setValues","1");
+
+    $('#cc1').combobox({
+        data:[{id:1,text:"a"},{id:2,text:"b"}],
+        // url:'combobox_data.json',
+        valueField:'id',
+        textField:'text'
+    });
+    $('#cc1').combobox("setValues","2");
 
 
 

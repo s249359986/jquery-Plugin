@@ -16,8 +16,13 @@
  */
 (function($){
     var COMBOBOX_SERNO = 0;
+    var styleClazz={
+        comboboxItem:"combobox-item",
+        textboxText:"textboxText"
+    };
 
     function getRowIndex(target, value){
+        debugger;
         var state = $.data(target, 'combobox');
         var opts = state.options;
         var data = state.data;
@@ -125,27 +130,30 @@
      */
     function setValues(target, values, remainText){
         var opts = $.data(target, 'combobox').options;
-        var panel = $(target).combo('panel');
+     //   var panel = $(target).combo('panel');
 
-        if (!$.isArray(values)){values = values.split(opts.separator)}
-        panel.find('div.combobox-item-selected').removeClass('combobox-item-selected');
-        var vv = [], ss = [];
-        for(var i=0; i<values.length; i++){
-            var v = values[i];
-            var s = v;
-            opts.finder.getEl(target, v).addClass('combobox-item-selected');
-            var row = opts.finder.getRow(target, v);
-            if (row){
-                s = row[opts.textField];
-            }
-            vv.push(v);
-            ss.push(s);
-        }
+       // if (!$.isArray(values)){values = values.split(opts.separator)}
+        //panel.find('div.combobox-item-selected').removeClass('combobox-item-selected');
+//        var vv = [], ss = [];
+//      //  for(var i=0; i<values.length; i++){
+//            var v = values;//values[i];
+//            var s = v;
+//            opts.finder.getEl(target, v).addClass('combobox-item-selected');
+//            var row = opts.finder.getRow(target, v);
+//            if (row){
+//                s = row[opts.textField];
+//            }
+//            vv.push(v);
+//            ss.push(s);
+      //  }
 
-        if (!remainText){
-            $(target).combo('setText', ss.join(opts.separator));
-        }
-        $(target).combo('setValues', vv);
+//        if (!remainText){
+//            $(target).combo('setText', ss.join(opts.separator));
+//        }
+      //  $(target).combo('setValues', vv);
+
+
+        $("."+styleClazz.textboxText).text(values);
     }
 
     /**
@@ -155,8 +163,8 @@
         var state = $.data(target, 'combobox');
         var opts = state.options;
 
-        state.data = opts.loadFilter.call(target, data);
-        state.groups = [];
+        state.data =data; //opts.loadFilter.call(target, data);
+       // state.groups = [];
         data = state.data;
 
         var selected = $(target).combobox('getValues');
@@ -166,24 +174,31 @@
             var row = data[i];
             var v = row[opts.valueField]+'';
             var s = row[opts.textField];
-            var g = row[opts.groupField];
+           // var g = row[opts.groupField];
 
-            if (g){
-                if (group != g){
-                    group = g;
-                    state.groups.push(g);
-                    dd.push('<div id="' + (state.groupIdPrefix+'_'+(state.groups.length-1)) + '" class="combobox-group">');
-                    dd.push(opts.groupFormatter ? opts.groupFormatter.call(target, g) : g);
-                    dd.push('</div>');
-                }
-            } else {
-                group = undefined;
-            }
+//            if (g){
+//                if (group != g){
+//                    group = g;
+//                    state.groups.push(g);
+//                    dd.push('<div id="' + (state.groupIdPrefix+'_'+(state.groups.length-1)) + '" class="combobox-group">');
+//                    dd.push(opts.groupFormatter ? opts.groupFormatter.call(target, g) : g);
+//                    dd.push('</div>');
+//                }
+//            } else {
+//                group = undefined;
+//            }
 
-            var cls = 'combobox-item' + (row.disabled ? ' combobox-item-disabled' : '') + (g ? ' combobox-gitem' : '');
+            var cls =styleClazz.comboboxItem;//'combobox-item' + (row.disabled ? ' combobox-item-disabled' : '') + (g ? ' combobox-gitem' : '');
             dd.push('<div id="' + (state.itemIdPrefix+'_'+i) + '" class="' + cls + '">');
            // dd.push(opts.formatter ? opts.formatter.call(target, row) : s);
+            dd.push(s);
             dd.push('</div>');
+
+            $(".combo-panel").html(dd.join(''));
+            $("."+styleClazz.comboboxItem).click(function(){
+                $("."+styleClazz.textboxText).text($(this).text());
+                opts.onSelect.call(target,state.options.finder.getRow(target,$(this).text()));
+            });
 
 
 //			if (item['selected']){
@@ -320,20 +335,19 @@
       //  $(target).addClass('combobox-f');
         var tempH=$(target).outerHeight();
         var tempW=$(target).outerWidth();
-
-
         var tempOffset={
             left:$(target).offset().left,
             top:$(target).offset().top+tempH+2
         }
         //$(target).after('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"></span>').addClass("combo");
 
-        $('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"><span class="textbox-addon" style="position: absolute;right: 0px;top:0px;"><a class="combo-arrow" style="width: 18px;height: 22px;display: inline-block;"></a></span></span>').addClass("combo").insertAfter($(target));
+        $('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"><span class="textbox-addon" style="position: absolute;right: 0px;top:0px;"><a class="combo-arrow" style="width: 18px;height: 22px;display: inline-block;"></a></span><div class='+styleClazz.textboxText+'></div></span>').addClass("combo").insertAfter($(target));
 
         $('<div class="combo-panel combo-panel-closed" style="display: none;height: 300px;width: 400px;background-color: #ff0000;"></div>').css("position","absolute").offset(tempOffset).appendTo($(document.body));
         $(target).hide();
 
         $(".textbox-addon").bind("click",function(){
+            $(".combo-panel").hide();
             if($(".combo-panel").hasClass("combo-panel-closed"))
             {
                 $(".combo-panel").removeClass("combo-panel-closed").show();
@@ -344,10 +358,6 @@
             }
 
         });
-
-
-
-
 
 //        $(target).combo($.extend({}, opts, {
 //            onShowPanel: function(){
@@ -410,7 +420,7 @@
                     data: []
                 });
                 create(this);
-                var data = $.fn.combobox.parseData(this);
+                var data =[{id:1,title:"a1"},{id:2,title:"a2"}];// $.fn.combobox.parseData(this);
                 if (data.length){
                     loadData(this, data);
                 }
@@ -589,7 +599,8 @@
             },
             getRow:function(target, p){
                 var state = $.data(target, 'combobox');
-                var index = (p instanceof jQuery) ? p.attr('id').substr(state.itemIdPrefix.length+1) : getRowIndex(target, p);
+                //var index = (p instanceof jQuery) ? p.attr('id').substr(state.itemIdPrefix.length+1) : getRowIndex(target, p);
+                var index =getRowIndex(target, p);
                 return state.data[parseInt(index)];
             }
         },
@@ -597,7 +608,9 @@
         onBeforeLoad: function(param){},
         onLoadSuccess: function(){},
         onLoadError: function(){},
-        onSelect: function(record){},
+        onSelect: function(record){
+            debugger;
+        },
         onUnselect: function(record){}
     });
 })(jQuery);
