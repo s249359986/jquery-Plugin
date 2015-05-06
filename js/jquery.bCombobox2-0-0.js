@@ -332,14 +332,14 @@
         state.itemIdPrefix = '_easyui_combobox_i' + COMBOBOX_SERNO;
         state.groupIdPrefix = '_easyui_combobox_g' + COMBOBOX_SERNO;
 
-      //  $(target).addClass('combobox-f');
+
         var tempH=$(target).outerHeight();
         var tempW=$(target).outerWidth();
         var tempOffset={
             left:$(target).offset().left,
             top:$(target).offset().top+tempH+2
         }
-        //$(target).after('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"></span>').addClass("combo");
+
 
         $('<span style="position:relative;display:inline-block;width:'+tempW+'px; height:'+tempH+'px;"><span class="textbox-addon" style="position: absolute;right: 0px;top:0px;"><a class="combo-arrow" style="width: 18px;height: 22px;display: inline-block;"></a></span><div class='+styleClazz.textboxText+'></div></span>').addClass("combo").insertAfter($(target));
 
@@ -359,42 +359,6 @@
 
         });
 
-//        $(target).combo($.extend({}, opts, {
-//            onShowPanel: function(){
-//                $(target).combo('panel').find('div.combobox-item,div.combobox-group').show();
-//                scrollTo(target, $(target).combobox('getValue'));
-//                opts.onShowPanel.call(target);
-//            }
-//        }));
-
-//        $(target).combo('panel').unbind().bind('mouseover', function(e){
-//            $(this).children('div.combobox-item-hover').removeClass('combobox-item-hover');
-//            var item = $(e.target).closest('div.combobox-item');
-//            if (!item.hasClass('combobox-item-disabled')){
-//                item.addClass('combobox-item-hover');
-//            }
-//            e.stopPropagation();
-//        }).bind('mouseout', function(e){
-//            $(e.target).closest('div.combobox-item').removeClass('combobox-item-hover');
-//            e.stopPropagation();
-//        }).bind('click', function(e){
-//            var item = $(e.target).closest('div.combobox-item');
-//            if (!item.length || item.hasClass('combobox-item-disabled')){return}
-//            var row = opts.finder.getRow(target, item);
-//            if (!row){return}
-//            var value = row[opts.valueField];
-//            if (opts.multiple){
-//                if (item.hasClass('combobox-item-selected')){
-//                    unselect(target, value);
-//                } else {
-//                    select(target, value);
-//                }
-//            } else {
-//                select(target, value);
-//                $(target).combo('hidePanel');
-//            }
-//            e.stopPropagation();
-//        });
     }
 
     $.fn.combobox = function(options, param){

@@ -9,7 +9,7 @@
 (function ($, window, document, undefined) {
 
     $.fn.selectpick = function (options) {
-        // selectpick������
+
         var selectpick_config = {
             height: 30,
             width: 150,
@@ -21,35 +21,36 @@
         }
 
         var settings = $.extend({}, selectpick_config, options);
-        // ÿ������������Ĳ���
+
         return this.each(function (elem_id) {
+            debugger;
             var obj = this;
             var _offset = $(this).offset();
             var top = _offset.top + $(document).scrollTop();
             var elem_width = $(obj).width();
             var left = _offset.left + $(document).scrollLeft();
-            var elem_id = $(obj).attr("id"); // Ԫ�ص�ID
-            // ��ɵ�div����ʽ
+            var elem_id = $(obj).attr("id"); //
+
             var _selectBody = "<div onselectstart='return false;'><div class='selectpick_div selectpick_div_" + elem_id + "'  id='selectpick_" + elem_id + "'><span style='float:left;' id='selectpick_span_" + elem_id + "'></span><span class='selectpick_icon' id='selectpick_icon_" + elem_id + "'></span></div><div class='selectpick_options selectpick_options_" + elem_id + "'></div></div>";
             $(_selectBody).appendTo("body");
             $(obj).addClass("select_hide");
 
-            // ����selectpick��ʾ��λ��
-            $(".selectpick_div_" + elem_id).css({
+
+            $(".selectpick_div_" + elem_id).css({//设置选矿的样式
                 "height": settings.height,
                 "width": settings.width,
                 "left": left,
                 "top": top
             });
 
-            // ����Ĭ����ʾ��div�ϵ�ֵ
+            //
             if (settings.selectText != "" && settings.selectText != undefined) {
                 $(".selectpick_div_" + elem_id + " span").first().text(settings.selectText);
             } else {
                 $(".selectpick_div_" + elem_id + " span").first().text($(obj).children("option").first().text());
             }
 
-            // �Ƿ����������
+            //
             if (settings.disabled) {
                 $(".selectpick_div_" + elem_id).addClass("selectpick_no_select");
                 $("#selectpick_icon_" + elem_id).css({"cursor": "default"});
@@ -108,7 +109,7 @@
 
                     // ÿ��li����¼�
                     $(".selectpick_ul_" + elem_id + " li").bind("click", function () {
-                        debugger;
+
                         $(".selectpick_div_" + elem_id + " span").first().text($(this).children("label").first().next().text());
                         $(".selectpick_options_" + elem_id).empty().hide();
                         // �ص�����

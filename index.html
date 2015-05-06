@@ -8,35 +8,25 @@
     <!--<link rel="stylesheet" href="css/easyui.css" />-->
 </head>
 <body>
-
-<input id="cc" name="aaa">
-
-
-
-<input id="cc1" name="aaa">
+<div class="cc">111</div>
+<div class="cc">22</div>
+<div class="cc">33</div>
+<div id="cc44">44</div>
+<div id="cc55">55</div>
 
 <script src="js/jquery-1.11.1.min.js"></script>
 <!--<script src="js/jquery.parser.js"></script>-->
-<script src="js/jquery.bCombobox2-0-0.js"></script>
+<script src="js/jquery.bb.js"></script>
 <!--<script src="js/jquery.window.js"></script>-->
 <!--<script src="js/jquery.easyui.min.js"></script>-->
 <script>
 
-    $('#cc').combobox({
-        data:[{id:1,text:"a"},{id:2,text:"b"}],
-       // url:'combobox_data.json',
-        valueField:'id',
-        textField:'text'
-    });
-    $('#cc').combobox("setValues","1");
 
-    $('#cc1').combobox({
-        data:[{id:1,text:"a"},{id:2,text:"b"}],
-        // url:'combobox_data.json',
-        valueField:'id',
-        textField:'text'
-    });
-    $('#cc1').combobox("setValues","2");
+
+    $('.cc').combobox();
+    $('#cc44').combobox();
+    $('#cc55').combobox();
+
 
 
 
