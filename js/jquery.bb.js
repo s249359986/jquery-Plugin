@@ -19,27 +19,41 @@
  */
 (function($){
     var COMBOBOX_SERNO=0;
+    var jqueryName="combobox";
     function create(target){//target===this当前id
-        var state = $.data(target, 'combobox');
+        var state = $.data(target,jqueryName);
         var opts = state.options;
         COMBOBOX_SERNO++;
+        opts.id=jqueryName+COMBOBOX_SERNO;
         var tempH=$(target).outerHeight();
         var tempW=$(target).outerWidth();
         var tempOffset={
             left:$(target).offset().left,
             top:$(target).offset().top+tempH+2
         }
-        var h1='<div style="background-color: #ff0000;height: 10px;width: 10px;position: absolute;left:'+tempOffset.left+'px;top:'+tempOffset.top+'px;"></div>';
-
+        var h1='<div id="'+jqueryName+COMBOBOX_SERNO+'" style="display:none;background-color: #ff0000;height:'+tempH+'px;width:'+tempW+'px;position: absolute;left:'+tempOffset.left+'px;top:'+tempOffset.top+'px;"></div>';
+        $(h1).appendTo($(document.body));
         $(target).bind("click",function(){
-            $(h1).appendTo($(document.body));
+
+            var tempId=$.data(this,jqueryName).options.id;
+            if($("#"+tempId).length>0)
+            {
+                if($("#"+tempId).hasClass("selected"))
+                {
+                    $("#"+tempId).hide();
+                    $("#"+tempId).removeClass("selected");
+                }
+                else
+                {
+                    $("#"+tempId).show();
+                    $("#"+tempId).addClass("selected");
+                }
+            }
+
         });
 
-
-
-
     }
-var jqueryName="combobox";
+
 
     $.fn.combobox = function(options, param){
 
@@ -54,19 +68,10 @@ var jqueryName="combobox";
 
                 state = $.data(this, jqueryName, {
                     options: $.extend({}, $.fn.combobox.defaults, options)
-
-
                 });
                 create(this);
             }
-
-
         });
     };
-    $.fn.combobox.defaults= $.extend({},{},{a:"a",b:"b"});
-
-
-
-
-
+    $.fn.combobox.defaults= $.extend({},{},{a:"a",b:"b",id:""});
 })(jQuery);
