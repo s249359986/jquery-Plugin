@@ -1,0 +1,116 @@
+.font_nav_color_up
+{
+    color: rgb(76,77,82);
+}
+.font_size_16
+{
+    font-size: 16px;
+}
+.font_color_083084089
+{
+    color: rgb(83,84,89);
+}
+.font_color_188191196
+{
+    color: rgb(188,191,196);
+}
+.font_color_180183188
+{
+    color: rgb(180,183,188);
+}
+.font_color_188191193
+{
+    color: rgb(188,191,193);
+}
+.font_color_187191194
+{
+    color: rgb(187,191,194);
+}
+.font_size_B100
+{
+    font-size: 100%;
+}
+.font_color_white
+{
+    color: #ffffff;
+}
+.font_color_11118779
+{
+    color: rgb(111,187,79);
+}
+.font_size_18
+{
+    font-size: 18px;
+}
+.font_size_22
+{
+    font-size: 22px;
+}
+.css_size_30
+{
+    font-size: 30px;
+}
+a:link
+{
+text-decoration:none;
+    color: rgb(188,191,196);
+}     /* 未访问的链接 */
+a:visited
+{
+text-decoration:none;
+    color: rgb(188,191,196);
+}  /* 已访问的链接 */
+a:hover
+{
+  text-decoration:none;
+    color: rgb(188,191,196);
+}    /* 当有鼠标悬停在链接上 */
+a:active
+{
+  text-decoration:none;
+    color: rgb(188,191,196);
+}   /* 被选择的链接 */
+/*命名规则定义*/
+.button_font_size/*所有按钮的字体大小*/
+{
+    font-size: 22px;
+}
+.input_font_size
+{
+    font-size: 16px;
+}
+.search_font_color
+{
+    color: #b3b3b3;
+}
+
+.num_font
+{
+    color: #6c6c6c;
+    font-size: 22px;
+
+}
+.message_font
+{
+    font-size: 18px;
+    color: #6c6c6c;
+}
+.myBill_right_font_size
+{
+    font-size: 15px;
+}
+.numType_font
+{
+    color:#1e82ce;
+}
+.css_font_color_6c
+{
+    color:#6c6c6c;
+
+}
+.more_right_title
+{
+    font-size: 15px;
+    color: #adb0b4;
+}
+

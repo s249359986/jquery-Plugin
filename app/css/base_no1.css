@@ -1,0 +1,1815 @@
+/*窗口宽度在639px下开始*/
+
+/*整体框架样式*/
+.show
+{
+
+   display:block;
+/*   position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 99999;
+    width: 100%;
+*/
+}
+
+.css_height_screen
+{
+
+ /*   height: 478px;*/
+/*    height: 800px;*/
+}
+/**  2014-4-12正式样式 开始*/
+
+/*去除外边框*/
+a:focus,input:focus{
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+input
+{
+    outline:none;
+    -webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-user-modify:read-write-plaintext-only;
+}
+
+div
+{
+    overflow: hidden;
+
+}
+
+
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, input, button, textarea, p, blockquote, th, td, form {
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+    border: none
+}
+.color_active
+{
+    color: #1e82ce;
+}
+.num_height
+{
+    height: 55px;
+}
+.win_horizontal_search_outer
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+}
+.win_horizontal_outer/*水平窗口布局内*/
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+
+    -webkit-box-align: center;
+    -moz-box-align: center;
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+
+    background-color: #ffffff;
+}
+.win_horizontal_outer_height
+{
+    height: 50px;
+}
+
+.win_left
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    padding-left:5px;
+
+
+}
+.win_right
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    padding-right:5px;
+}
+.win
+{
+    display: -webkit-box;
+
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+}
+.prepaid_message_suc
+{
+    font-size: 22px;
+    color: rgb(110,186,78);
+}
+.prepaid_message_fal
+{
+    font-size: 22px;
+    color:#535459;
+}
+.win_num_type
+{
+   position:relative;
+    left: -100px;
+    top: 50px;
+    width: 120px;
+    z-index: 99999;
+    background:rgba(0,0,0,0.8);
+
+}
+.call_btn_static
+{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    /*圆角结束*/
+    /*左右边距开始*/
+    margin-left:10px;
+    margin-right:10px;
+    /*左右边距结束*/
+    /*字体颜色开始*/
+    color: #ffffff;
+
+    height: 50px;
+
+    /*字体居中开始*/
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+
+
+    /*字体居中结束*/
+
+    font-size: 22px;
+
+
+
+    /*     border-color:rgb(51,51,255);
+      border-width:2px;
+      border-style:solid;*/
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+
+    background-color: rgb(110,186,78);
+
+    margin-top:20px;
+
+
+}
+
+.layout_horizontal_inner_right_witharrow/*有箭头时的右侧文字*/
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    display: -webkit-box;
+    -webkit-box-pack: end;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    padding-right:5px;
+    margin-right: 0px;
+    color: #adb0b4;
+}
+
+
+
+
+.call_btn_active
+{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    /*圆角结束*/
+    /*左右边距开始*/
+    margin-left:10px;
+    margin-right:10px;
+    /*左右边距结束*/
+    /*字体颜色开始*/
+    color: #ffffff;
+
+    height: 50px;
+
+    /*字体居中开始*/
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    /*字体居中结束*/
+
+    font-size: 22px;
+
+
+
+    /*     border-color:rgb(51,51,255);
+      border-width:2px;
+      border-style:solid;*/
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+
+    background-color: rgb(30,130,206);
+
+    margin-top:20px;
+
+
+}
+
+.nav_down_left_static
+{
+  /*  width: 80px;*/
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+
+    font-size:16px;
+
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+
+    background-image: url(../img/myBill0.png);
+    background-repeat: no-repeat;
+    background-size: 30px 22px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+padding-bottom: 4px;
+
+    color: #636468;
+
+
+
+}
+.nav_down_left_active
+{
+    /*  width: 80px;*/
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+    display: -webkit-box;
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+
+    background-image: url(../img/myBill1.png);
+    background-repeat: no-repeat;
+    background-size: 30px 22px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+
+    color: rgb(56,144,211);
+
+    padding-bottom: 4px;
+
+}
+.nav_down_center_static
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+    display: -webkit-box;
+
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+    background-image: url(../img/call0.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+
+    color: #636468;
+    padding-bottom: 4px;
+}
+.nav_down_center_active
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+    display: -webkit-box;
+
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+    background-image: url(../img/call1.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+
+    color: rgb(56,144,211);
+
+    padding-bottom: 4px;
+}
+.nav_down_right_static
+{
+    /*  width: 80px;*/
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+    display: -webkit-box;
+
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+    background-image: url(../img/more0.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+
+    color: #636468;
+    padding-bottom: 4px;
+}
+.nav_down_right_active
+{
+    /*  width: 80px;*/
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+    display: -webkit-box;
+
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+
+    background-image: url(../img/more1.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center 7px;
+
+    color: rgb(56,144,211);
+    padding-bottom: 4px;
+}
+.input_base
+{
+
+    height:45px;
+    /*宽度*/
+    display: -webkit-box;
+    display: -moz-box;
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    border-style:none;
+    font-size:16px;
+    padding-left:8px;
+    color: #6c6c6c;
+}
+.button_submit_base
+{
+/*圆角开始*/
+    /*     border-color:rgb(51,51,255);
+      border-width:2px;
+      border-style:solid;*/
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:5px;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    /*圆角结束*/
+    /*左右边距开始*/
+    margin-left:10px;
+    margin-right:10px;
+    /*左右边距结束*/
+    /*字体颜色开始*/
+    color: #ffffff;
+
+    height: 50px;
+
+    /*字体居中开始*/
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+
+
+
+    /*字体居中结束*/
+
+    font-size: 18px;
+}
+.button_submit_base_height
+{
+    height: 50px;
+}
+.prepaid_background_color
+{
+    background-color: #6fbb4f;
+}
+.removeReserve_background_color
+{
+    background-color: #1e82ce;
+    color: #ffffff;
+}
+.input_height
+{
+    height:45px;
+}
+
+
+
+.nav_up_left
+{
+    /*  -moz-box-flex:1;
+      -webkit-box-flex:1;
+      */
+    width: 80px;
+  /*  font-size:30px;*/
+}
+.nav_up_left_fontCollor
+{
+    color: rgb(247,247,247);
+}
+.nav_up_right
+{
+    /*  -moz-box-flex:1;
+      -webkit-box-flex:1;
+      */
+    width: 80px;
+    font-size:14px;
+    color: #535459;
+}
+.nav_up_center
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:19px;
+    color: #535459;
+}
+
+.nav_down_left
+{
+    /*  -moz-box-flex:1;
+      -webkit-box-flex:1;
+      */
+    width: 80px;
+    font-size:16px;
+}
+.nav_down_right
+{
+    /*  -moz-box-flex:1;
+      -webkit-box-flex:1;
+      */
+    width: 80px;
+    font-size:16px;
+
+}
+.nav_down_center
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:16px;
+
+
+}
+
+
+.right_arrow
+{
+    height: 20px;
+    width:16px;
+    background-image: url(../img/arrow.png);
+    background-size: 9px 14px;
+    background-position:center center;
+    background-repeat: no-repeat;
+
+   background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+
+
+    margin-right: 6px;
+
+
+}
+.layout_right_arrow
+{
+    position: fixed;
+    right: 50px;
+    top: 0px;
+}
+.main_body
+{
+      margin-bottom: 70px;
+  /*    margin-top: 65px;
+  */
+    margin-top: 50px;
+
+}
+.main_header
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+
+    background-color: rgb(247,247,247);
+    height: 50px;
+    color: #535459;
+
+
+
+}
+.main_footer_show
+{
+
+
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+
+    z-index: 99999;
+    width: 100%;
+
+
+}
+.main_header_show
+{
+     position: fixed;
+      top: 0px;
+      left: 0px;
+      z-index: 99999;
+  width: 100%;
+
+}
+.hide
+{
+
+display: none;
+
+
+}
+.alertHide
+{
+
+
+    width: 0px;
+    height: 0px;
+
+
+
+}
+
+
+
+
+/*默认的适配*/
+.show_float
+{
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;/*不同的高度*/
+    background-color:green;
+    left:0px;
+    top:0px;
+    z-index: 99999;
+    background:rgba(255,255,255,0.7);
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+}
+
+
+
+@media screen and (max-height:800px) and (min-height:491px) {
+    /*苹果*/
+
+
+    .show_float
+    {
+        position: fixed;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 600px;/*不同的高度*/
+        background-color:green;
+        left:0px;
+        top:0px;
+        z-index: 99999;
+        background:rgba(255,255,255,0.7);
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+
+
+    }
+
+}
+
+
+
+
+@media screen and (max-height:490px) and (min-height:481px) {
+    /*双闪光htc*/
+
+
+    .show_float
+    {
+        position: fixed;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 500px;/*不同的高度*/
+        background-color:green;
+        left:0px;
+        top:0px;
+        z-index: 99999;
+        background:rgba(255,255,255,0.7);
+        display: -webkit-box;
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+
+
+    }
+
+}
+
+
+
+
+
+
+
+/**  2014-4-12正式样式 结束*/
+.css_background_color_110186078
+{
+    background-color: rgb(110,186,78);
+}
+.css_background_color_197196196
+{
+    background-color: rgb(197,196,196);
+}
+.css_color_white
+{
+    color: #ffffff;
+}
+
+
+
+.show_float_body
+{
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 500px;
+    background-color:green;
+    left:0px;
+    top:0px;
+    z-index: 99999;
+    background:rgb(255,255,255);
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+
+}
+.message_alert
+{
+
+    position: fixed;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 300px;
+    background-color:green;
+    left:0px;
+    top:20px;
+    z-index: 10;
+    background:rgba(233,233,233,0.8);
+    display: -webkit-box;
+
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+}
+.message_confirm_screen
+{
+
+    position: fixed;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 400px;
+    background-color:green;
+    left:0px;
+    top:0px;
+    z-index: 10;
+    background:rgba(0,0,0,0);
+    display: -webkit-box;
+
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+
+}
+.message_confirm_body
+{
+
+    width: 200px;
+    height: 150px;
+    background:rgba(100,100,100,0.8);
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+
+
+
+}
+.nav_flex
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:14px;
+}
+/*
+.css_text_center
+{
+    display: -webkit-box;
+
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+}
+*/
+.css_text_bottom_center     /*垂直底部水平居中*/
+{
+    display: -webkit-box;
+
+    -webkit-box-pack:center;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: end;
+}
+
+.css_text_center_right     /*垂直居中水平右对齐*/
+{
+    display: -webkit-box;
+
+    -webkit-box-pack:end;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: end;
+    -moz-box-align: center;
+}
+
+.css_background_color_247247247
+{
+    background-color: rgb(247,247,247);
+}
+.css_background_color_white
+{
+    background-color: #ffffff;
+    color: rgb(130,130,130);
+}
+.css_backgroundcolor_white
+{
+    background-color: #ffffff;
+}
+@media screen and (max-width:480px),handheld and (max-width:480px)
+
+{
+    /*css3作图开始*/
+
+
+    .css_circle
+    {
+
+   /*     border-color:rgb(51,51,255);
+        border-width:2px;
+        border-style:solid;*/
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        border-radius:5px;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+
+    }
+    .mobileCard_circle_static
+    {
+            height: 35px;
+        display: -webkit-box;
+
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+
+    }
+
+    .mobileCard_circle_active
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        height: 35px;
+        color: #ffffff;
+        display: -webkit-box;
+
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+
+      /*  border-color:rgb(51,51,255);
+        border-width:2px;
+        border-style:solid;
+        */
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        border-radius:25px;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+        background-color: rgb(111,187,79);
+
+    }
+    .mobileCard_circle_title_outer
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        height: 35px;
+
+        display: -webkit-box;
+
+
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+
+          border-color:#d2d1d5;
+          border-width:1px;
+          border-style:solid;
+
+        padding-left:0px;
+        padding-right:0px;
+        padding-top:0px;
+        padding-bottom:0px;
+        border-radius:25px;
+        -moz-border-radius:25px;
+        -webkit-border-radius:25px;
+
+
+    }
+.circle_prepaid
+{
+    padding-left:0px;
+    padding-right:0px;
+    padding-top:0px;
+    padding-bottom:0px;
+    border-radius:25px;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+    /*css3作图结束*/
+
+    .nav_flex
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        font-size:14px;
+    }
+
+
+
+    .css_margin_bottom15
+    {
+        margin-bottom:15px;
+    }
+
+    .css_padding_top5
+    {
+        padding-top: 5px;
+    }
+/*
+    .css_margin_top
+    {
+        margin-top:10px;
+
+    }
+    */
+    /* .css_margin_topToheaderbody部分距离头部的高度 ；移动到公共内
+     {
+         margin-top:15px;
+
+     }
+     */
+    .css_margin_top_1p
+    {
+        margin-top:10px;
+    }
+    .css_margin_top_header
+    {
+        margin-top:20px;
+
+    }
+    .css_margin_top150
+    {
+        margin-top:150px;
+
+    }
+
+
+    .css_background_color_111187079
+    {
+        background-color:rgb(111,187,79);
+        color:#ffffff;
+
+    }
+
+
+    .css_input_width_flex
+    {
+        display: -webkit-box;
+        display: -moz-box;
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+
+    }
+    .css_input_width
+    {
+        width:200px;
+
+    }
+ /*   .css_border_bottom_blue
+    {
+        border-bottom-color:rgb(52,52,253);
+        border-bottom-width:3px;
+        border-bottom-style:solid;
+
+    }
+
+    .css_color_117162208
+    {
+        color:white;
+        background-color:rgb(117,162,208);
+
+    }
+
+    .css_color_949494
+    {
+        color:rgb(94,94,94);
+
+
+    }
+
+    .css_color_223043044
+    {
+        color:white;
+        background-color:rgb(223,43,44);
+
+    }
+
+    .css_backgroundcolor_223043044
+    {
+
+        background-color:rgb(223,43,44);
+
+    }
+
+    .css_color_25416271
+    {
+        color:white;
+        background-color:rgb(254,162,71);
+
+    }
+
+    .css_text_center
+    {
+        display: -webkit-box;
+
+        -webkit-box-pack: center;
+        -webkit-box-align: center;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+    }
+
+    .css_text_horizontal_center
+    {
+        display: -webkit-box;
+        -webkit-box-orient: horizontal;
+        -moz-box-orient: horizontal;
+        -webkit-box-pack: center;
+
+        display: -moz-box;
+        -moz-box-pack: center;
+
+    }
+
+    .css_height_70
+    {
+        height:70px;
+
+    }
+
+    .css_text_vertical_center
+    {
+        display: -webkit-box;
+
+
+        -webkit-box-align: center;
+        display: -moz-box;
+
+        -moz-box-align: center;
+        padding-left:10px;
+    }
+
+    .css_text_vertical_center_nopaddin
+    {
+        display: -webkit-box;
+
+
+        -webkit-box-align: center;
+        display: -moz-box;
+
+        -moz-box-align: center;
+
+    }
+
+    .nav
+    {
+        display:-moz-box;
+        display:-webkit-box;
+        -moz-box-orient:horizontal;
+        -webkit-box-orient:horizontal;
+    }
+
+    .num_input
+    {
+
+        display:-moz-box;
+        display:-webkit-box;
+        -moz-box-orient:horizontal;
+        -webkit-box-orient:horizontal;
+        height:50px;
+    }
+
+    .num_input_text
+    {
+        -moz-box-flex:3;
+        -webkit-box-flex:3;
+    }
+    .num_input_back
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+    }
+
+    .num_input_back_width_50
+    {
+        width:50px;
+    }
+
+    .num_w
+    {
+        display:-moz-box;
+        display:-webkit-box;
+        -moz-box-orient:horizontal;
+        -webkit-box-orient:horizontal;
+    }
+    .num_w div
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        font-size:20px;
+
+    }
+
+    .text_num
+    {
+        display:-moz-box;
+        display:-webkit-box;
+
+    }
+    .text_num input
+    {
+
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+    }
+
+    .nav_left
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        font-size:20px;
+        width:20px;
+
+    }
+
+    .nav_right
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        font-size:20px;
+        width:20px;
+
+    }
+
+    table {
+
+        display:-moz-box;
+        display:-webkit-box;
+
+    }
+    td {
+        border-color:black;
+        border-style:solid;
+        border-width:1px;
+        width:100px;
+        height:40px;
+        text-align:center;
+    }
+
+    .call_btn
+    {
+        color:white;
+        background-color:rgb(110,186,78);
+        height:50px;
+    }
+    */
+    /*垂直布局
+    .layout_vertical_outer
+    {
+        display:-moz-box;
+        display:-webkit-box;
+        -moz-box-orient:vertical;
+        -webkit-box-orient:vertical;
+    }
+
+    .layout_vertical_inner
+    {
+
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+
+    }
+    .layout_vertical_inner4
+    {
+
+        -moz-box-flex:4;
+        -webkit-box-flex:4;
+
+    }
+*/
+    /*水平布局
+    .layout_horizontal_outer
+    {
+        display:-moz-box;
+        display:-webkit-box;
+        -moz-box-orient:horizontal;
+        -webkit-box-orient:horizontal;
+    }
+
+
+    .layout_horizontal_inner_left1
+    {
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        padding:5px;
+    }
+
+    .layout_horizontal_inner_flex5
+    {
+        -moz-box-flex:5;
+        -webkit-box-flex:5;
+        width:10px;
+
+    }
+
+    .layout_horizontal_inner_right1
+    {
+
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        padding:5px;
+    }
+
+    .layout_horizontal_inner_left
+    {
+        -webkit-box-flex:1;
+        padding-left:10px;
+        color: #6c6c6c;
+    }
+
+    .layout_horizontal_inner_left_package_static
+    {
+        -webkit-box-flex:1;
+        padding-left:10px;
+        color: #6c6c6c;
+    }
+
+    .layout_horizontal_inner_left_package_active
+    {
+        -webkit-box-flex:1;
+        padding-left:10px;
+        color: #1e82ce;
+    }
+
+    .layout_horizontal_inner_right
+    {
+
+        -moz-box-flex:1;
+        -webkit-box-flex:1;
+        display: -webkit-box;
+        -webkit-box-pack: end;
+        -webkit-box-align: end;
+        display: -moz-box;
+        -moz-box-pack: center;
+        -moz-box-align: center;
+        padding-right:10px;
+        margin-right: 0px;
+        color: #adb0b4;
+    }
+
+    */
+
+
+
+
+}
+
+
+/*窗口宽度在639px下结束*/
+/*窗口宽度在640px以上20000px以下开始*/
+
+
+@media screen and (min-width:481px) and (max-width:20000px)
+{
+
+    /*不同的开始*/
+
+
+    .css_input_width
+    {
+        width:400px;
+
+    }
+
+    /*不同的结束*/
+
+
+}
+
+
+
+/*窗口宽度在640px以上20000px以下结束*/
+
+/*公共css开始 2014-05-12*/
+body
+{
+    /*     font-family:"Microsoft YaHei";
+         display:-moz-box;
+         display:-webkit-box;
+         background-color:rgb(240,239,244);*/
+
+
+
+    width: 100%;
+    min-width: 320px;
+    /*    background: none repeat scroll 0% 0%;*/
+    background-color:rgb(240,239,244);
+    overflow-x: hidden;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select:none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-text-size-adjust: none;
+    -moz-user-select: none;
+
+    color: #000;
+    font: 14px/1.5 Tahoma,"Lucida Grande",Verdana,"Microsoft YaHei",hei;
+    font-size: 16px;
+
+
+    margin: 0px;
+    padding: 0px;
+
+
+
+
+
+    /*为去除点击外框添加*/
+
+
+}
+
+.css_background_color_117162254
+{
+    background-color:rgb(117,162,254);
+
+}
+
+.css_height_25
+{
+    height:25px;
+
+}
+.css_height_30
+{
+    height:30px;
+
+}
+.css_height_20
+{
+    height:45px;
+}
+.css_height_45
+{
+    height:45px;
+
+}
+.css_height_50
+{
+    height:50px;
+
+}
+.layout_horizontal_inner
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+
+}
+
+
+
+.css_color_223043044
+{
+    color:white;
+    background-color:rgb(223,43,44);
+
+}
+
+.css_backgroundcolor_223043044
+{
+
+    background-color:rgb(223,43,44);
+
+}
+
+.css_margin_top
+{
+    margin-top:10px;
+
+}
+.css_margin_topToheader/*body部分距离头部的高度*/
+ {
+    margin-top:15px;
+
+}
+
+.css_margin_bottom
+{
+    margin-bottom:5px;
+}
+
+.css_margin_left_right
+{
+    margin-left:10px;
+    margin-right:10px;
+}
+.css_margin_left10_right5
+{
+    margin-left:10px;
+    margin-right:5px;
+}
+.css_margin_left5_right10
+{
+    margin-left:5px;
+    margin-right:10px;
+}
+
+.css_input_noborder
+{
+    border-style:none;
+    outline: 0px none;
+}
+
+
+.css_text_vertical_center_nopaddin
+{
+    display: -webkit-box;
+
+
+    -webkit-box-align: center;
+    display: -moz-box;
+
+    -moz-box-align: center;
+
+}
+.css_border_bottom_blue
+{
+    border-bottom-color:rgb(52,52,253);
+    border-bottom-width:3px;
+    border-bottom-style:solid;
+
+}
+.css_color_117162208
+{
+    color:white;
+    background-color:rgb(117,162,208);
+
+}
+.css_color_949494
+{
+    color:rgb(94,94,94);
+
+
+}
+.css_color_253130130
+{
+    color:white;
+    background-color:rgb(253,130,130);
+
+}
+.css_color_25416271
+{
+    color:white;
+    background-color:rgb(254,162,71);
+
+}
+.css_text_center
+{
+    display: -webkit-box;
+
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+}
+.css_text_horizontal_center
+{
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -moz-box-orient: horizontal;
+    -webkit-box-pack: center;
+
+    display: -moz-box;
+    -moz-box-pack: center;
+
+}
+.css_height_70
+{
+    height:70px;
+
+}
+.css_text_vertical_center
+{
+    display: -webkit-box;
+
+
+    -webkit-box-align: center;
+    display: -moz-box;
+
+    -moz-box-align: center;
+    padding-left:10px;
+}
+.nav
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+}
+.num_input
+{
+
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+    height:50px;
+}
+.num_input_text
+{
+    -moz-box-flex:3;
+    -webkit-box-flex:3;
+}
+.num_input_back
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+}
+.num_input_back_width_50
+{
+    width:50px;
+}
+.num_w
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+}
+.num_w div
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:20px;
+
+}
+
+.text_num
+{
+    display:-moz-box;
+    display:-webkit-box;
+
+}
+.text_num input
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+}
+.nav_left
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:20px;
+    width:20px;
+
+}
+.nav_center
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:20px;
+
+}
+.nav_right
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    font-size:20px;
+    width:20px;
+
+}
+table {
+
+    display:-moz-box;
+    display:-webkit-box;
+
+}
+td {
+    border-color:black;
+    border-style:solid;
+    border-width:1px;
+    width:100px;
+    height:40px;
+    text-align:center;
+}
+.call_btn
+{
+    color:white;
+    background-color:rgb(110,186,78);
+    height:50px;
+}
+
+/*垂直布局*/
+.layout_vertical_outer
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:vertical;
+    -webkit-box-orient:vertical;
+}
+
+.layout_vertical_inner
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+
+}
+.layout_vertical_inner4
+{
+
+    -moz-box-flex:4;
+    -webkit-box-flex:4;
+
+}
+
+
+/*水平布局*/
+.layout_horizontal_outer
+{
+    display:-moz-box;
+    display:-webkit-box;
+    -moz-box-orient:horizontal;
+    -webkit-box-orient:horizontal;
+}
+.layout_horizontal_inner_left1
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    padding:5px;
+}
+.layout_horizontal_inner_left1_notpadding
+{
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+
+}
+.layout_horizontal_inner_flex5
+{
+    -moz-box-flex:5;
+    -webkit-box-flex:5;
+    width:10px;
+
+}
+.layout_horizontal_inner_right1
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    padding:5px;
+}
+
+.layout_horizontal_inner_left
+{
+    -webkit-box-flex:1;
+    padding-left:10px;
+    color: #6c6c6c;
+}
+.layout_horizontal_inner_left_package_static
+{
+    -webkit-box-flex:1;
+    padding-left:10px;
+    color: #6c6c6c;
+}
+.layout_horizontal_inner_left_package_active
+{
+    -webkit-box-flex:1;
+    padding-left:10px;
+    color: #1e82ce;
+}
+
+.layout_horizontal_inner_right
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    display: -webkit-box;
+    -webkit-box-pack: end;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    padding-right:10px;
+    margin-right: 0px;
+    color: #adb0b4;
+}
+.layout_horizontal_inner_right_witharrow
+{
+
+    -moz-box-flex:1;
+    -webkit-box-flex:1;
+    display: -webkit-box;
+    -webkit-box-pack: end;
+    -webkit-box-align: end;
+    display: -moz-box;
+    -moz-box-pack: center;
+    -moz-box-align: center;
+    padding-right:5px;
+    margin-right: 0px;
+    color: #adb0b4;
+}
+
+/*公共css结束*/

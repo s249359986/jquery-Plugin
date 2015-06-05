@@ -1,0 +1,45 @@
+<!--我的号码预留页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+<div class="css_background_color_white css_border_base">
+    <div class="win_horizontal_outer win_horizontal_outer_height">
+        <div class="layout_horizontal_inner_left">{{selectNum.title}}</div>
+        <div class="layout_horizontal_inner_right myBill_right_font_size">{{selectNum.num}}</div>
+
+    </div>
+    </div>
+
+<div class="css_background_color_white css_border_base css_margin_top">
+
+    <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+        <div class="layout_horizontal_inner_left">失效时间</div>
+        <div class="layout_horizontal_inner_right myBill_right_font_size">{{r.reserveTime}}</div>
+
+    </div>
+    <div class="win_horizontal_outer win_horizontal_outer_height">
+        <div class="layout_horizontal_inner_left">已选套餐</div>
+        <div class="layout_horizontal_inner_right myBill_right_font_size">{{r.package}}</div>
+
+    </div>
+</div>
+
+
+
+
+<div class="layout_horizontal_outer">
+
+    <div class="layout_horizontal_inner css_circle css_margin_left_right button_submit_base_height  css_text_center css_margin_top prepaid_background_color" ng-click='clickAccountPrepaid()'> &nbsp;&nbsp;充值&nbsp;&nbsp;
+    </div>
+
+    <div class="layout_horizontal_inner css_circle css_margin_left_right button_submit_base_height  css_text_center css_margin_top removeReserve_background_color" ng-click='clickRemoveReserve()'> 取消预留
+    </div>
+
+</div>
+
+
+
+</div>
+
+
+

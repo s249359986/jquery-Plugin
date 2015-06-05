@@ -1,0 +1,22 @@
+<!--套餐详情页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+ <!--   <div class="css_margin_top layout_vertical_inner layout_horizontal_outer css_border_bottom css_text_horizontal_center css_height_50 css_border_base css_margin_left_right css_text_center"><div class="layout_horizontal_inner_left">套餐资费</div><div class="layout_horizontal_inner_right">3元/月</div></div>  -->
+
+<div class="css_border_base">
+    <div ng-repeat="num in packageTariff">
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">{{num.key}}</div>
+    <div class="layout_horizontal_inner_right myBill_right_font_size">{{num.value}}</div>
+</div>
+</div>
+
+
+
+</div>
+
+</div>
+
+
+

@@ -1,0 +1,40 @@
+<!--号码列表页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+<div class="win_horizontal_outer win_horizontal_outer_height css_border_base css_margin_top" style="overflow:visible;">
+   <div class="layout_horizontal_inner_left win_horizontal_outer win_horizontal_outer_height" style="overflow:visible;" >
+       <span ng-click="clShowSelNumType()">{{numTypeObj.title}}<img style="display: block;width: 11px;height: 5px;margin-left: 25px;" src={{numTypeObj.imgSrc}}></span>
+       <div class={{numTypeObj.class}}>
+           <div ng-repeat="numType in numTypes">
+               <div class="layout_horizontal_inner css_text_center {{numType.fontColor}}" ng-click="clSelectedType($index)" style="height: 30px;">{{numType.name}}</div>
+           </div>
+       </div>
+   </div>
+
+
+
+    <div class="layout_horizontal_inner_right" ><span ng-click="mySlide()">刷新</span></div>
+</div>
+
+<div class="css_border_base css_margin_top">
+<div ng-repeat="num in numLists">
+
+    <a href='#/selectPackage/{{num.secondNum}}'>
+        <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+                 <div class="layout_horizontal_inner_left">{{num.secondNum}}</div>
+                  <div class="right_arrow">   </div>
+        </div>
+
+    </a>
+
+
+</div>
+</div>
+
+
+</div>
+
+
+
+

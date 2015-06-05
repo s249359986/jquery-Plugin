@@ -1,0 +1,82 @@
+<!--注册页面1-->
+
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+
+    <form name='registerForm' novalidate>
+
+
+        <div class="css_circle css_border_base css_margin_left_right font_color_188191193 css_background_color_white">
+
+
+
+
+    <div class="css_text_center css_border_bottom">
+        <input class='input_base' maxlength="11"  ng-model="user.hostNumber" required type='text' placeholder="请输入您的手机号码" autofocus name='telNum'/>
+
+
+    </div>
+
+
+
+
+
+        <div class="css_text_center">
+            <input placeholder="登录密码" class='input_base' maxlength="8" ng-model="user.password" type='password' name='pwd'>
+        </div>
+
+</div>
+
+
+
+
+
+
+
+
+        <div class="button_submit_base css_background_color_110186078 css_margin_top_1p" ng-click="clRisterSure(user)"> 注册
+        </div>
+
+
+<!--两步注册
+
+    <div class="button_submit_base css_background_color_110186078 css_margin_top_1p" ng-click="clickRister(user)"> 获取登录密码
+    </div>
+-->
+
+
+    <div class="layout_vertical_inner layout_horizontal_outer css_text_vertical_center" ng-click="clPro()" style="margin-top: 3px;">
+
+        <input style="color:#b4b7bc;" type="checkbox" ng-model="user.ck"/><span style="color:#b4b7bc; font-size: 14px">已阅读并同意使用条款和隐私政策</span>
+
+    </div>
+    <div style="height: 20px;"></div>
+
+    <div class="layout_vertical_inner layout_horizontal_outer css_text_vertical_center" style="color:#549edb;font-size: 15px">
+      注册即可赠送3天免费试用号码和10分钟通话
+    </div>
+    <div class="layout_vertical_inner css_margin_left_right" style="margin-top:1px;color:#b4b7bc;font-size: 14px;">
+       请正确输入手机号码，系统会向您的手机发送登录密码，请注意查收。
+
+    </div>
+
+
+
+
+
+
+
+        <div class="css_height_50 css_text_center css_margin_left_right font_color_188191196 font_size_18 css_margin_top150">
+            <a href='#/login'><span class="font_color_11118779 font_size_16">立即登陆</span></a>&nbsp;|&nbsp;<a href='#/findpwd'><span class="font_color_180183188 font_size_16">找回密码</span></a></div>
+
+
+
+
+
+        </form>
+
+</div>
+
+
+

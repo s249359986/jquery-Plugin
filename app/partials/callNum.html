@@ -1,0 +1,45 @@
+
+<!--拨号页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+   <div class="layout_vertical_outer css_margin_left_right message_font">
+
+<div class="layout_vertical_inner css_text_vertical_center" style="font-size: 14px;margin-top: 0px;" ng-bind="msg.content0"></div>
+
+<div class={{msg.styleClass1}} ng-click="getSecondNum()" style="font-size: 14px;" ng-bind="msg.content1"></div>
+
+   
+   
+   
+   </div>
+
+
+
+
+<div class="css_border_base css_circle css_margin_left_right css_background_color_white css_margin_top num_font">
+<div class="num_input css_text_center num_outer_border_bottom">
+  
+ <div class="num_input_text" style="font-size:100%;padding-left: 10px;" ng-bind="keybord.num"></div><div ng-click='pluseNum()' class="bg_img_back"></div>
+</div>
+
+
+
+
+	<div class="layout_vertical_outer" id="keyBoardId">
+	
+	<div class="layout_vertical_inner layout_horizontal_outer num_outer_border_bottom">		<div class="layout_horizontal_inner css_text_center num_height num_outer_border_right" ng-click='addNum(1)'>1</div>   <div class="layout_horizontal_inner css_text_center num_height num_outer_border_right" ng-click='addNum(2)'>2</div>   <div class="layout_horizontal_inner css_text_center num_height" ng-click='addNum(3)'>3</div>		</div>
+	<div class="layout_vertical_inner layout_horizontal_outer num_outer_border_bottom">		<div class="layout_horizontal_inner css_text_center num_height num_outer_border_right" ng-click='addNum(4)'>4</div>   <div class="layout_horizontal_inner  css_text_center num_height num_outer_border_right" ng-click='addNum(5)'>5</div>   <div class="layout_horizontal_inner css_text_center num_height" ng-click='addNum(6)'>6</div>		</div>
+	<div class="layout_vertical_inner layout_horizontal_outer num_outer_border_bottom">		<div class="layout_horizontal_inner css_text_center num_height num_outer_border_right" ng-click='addNum(7)'>7</div>   <div class="layout_horizontal_inner  css_text_center num_height num_outer_border_right" ng-click='addNum(8)'>8</div>   <div class="layout_horizontal_inner css_text_center num_height" ng-click='addNum(9)'>9</div>		</div>
+	<div class="layout_vertical_inner layout_horizontal_outer">		<div class="layout_horizontal_inner css_text_center num_height num_outer_border_right bg_img_xin1" style="color:white;" ng-click='addNum("*")'>&nbsp;&nbsp;&nbsp;</div>   <div class="layout_horizontal_inner css_text_center num_height num_outer_border_right bg_img_lin1" ng-click='addNum(0)' style="color:white;">&nbsp;&nbsp;&nbsp;</div>   <div class="layout_horizontal_inner css_text_center num_height bg_img_jin1" style="color:white;"  ng-click='addNum("#")'>&nbsp;&nbsp;&nbsp;</div>		</div>
+	
+	</div>
+	
+
+
+
+</div>
+<div>
+<div style="margin-top: 10px;" ng-click='callNum(keybord)' class={{keybord.messageClass}}>   {{keybord.message}}    </div>
+</div>
+
+

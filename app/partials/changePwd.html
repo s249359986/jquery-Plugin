@@ -1,0 +1,25 @@
+<!--修改密码页面-->
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+ <div class="css_border_base">
+<div class="layout_horizontal_outer css_background_color_white css_border_bottom">
+    <input placeholder="原密码" ng-model='user.oldPassword' class='input_base' maxlength="8" type='password'/></div>
+
+<div class="layout_horizontal_outer css_background_color_white css_border_bottom">
+    <input placeholder="6-8位新密码" ng-model='user.newPassword1' class='input_base' maxlength="8" type='password'/></div>
+
+<div class="layout_horizontal_outer css_background_color_white">
+    <input placeholder="确认新密码" ng-model='user.newPassword2' class='input_base' maxlength="8" type='password'/></div>
+</div>
+
+
+
+
+
+<div class="button_submit_base css_background_color_110186078 css_margin_top_1p" ng-click="changePwd(user)">  确认修改  </div>
+</div>
+
+
+
+
+

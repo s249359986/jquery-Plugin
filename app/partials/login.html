@@ -1,0 +1,67 @@
+
+<!--登录页面2-->
+
+
+<!--
+<div class={{alertMsg.alertClass}}>
+
+
+    <div class="web_alert_title">{{alertMsg.titleTitle}}</div>
+
+    <div class="web_alert_msg">{{alertMsg.msgTitle}}</div>
+    <div class="web_alert_button_outer"><div class="web_alert_button_ok" ng-click="clickAlertOk()">{{alertMsg.okTitle}}</div><div class="web_alert_button_no" ng-click="clickAlertNo()">{{alertMsg.noTitle}}</div></div>
+</div>
+-->
+
+<!--ng-disabled='!loginForm.$valid'-->
+
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+
+
+
+
+
+
+  <div class="layout_vertical_outer">
+    <form name='loginForm' novalidate>
+<!--
+      <div class="layout_vertical_inner css_text_center">
+          <div class="bg_img_logo"></div>
+      </div>
+      -->
+
+    <div class="layout_vertical_inner">
+
+
+
+
+                    <div class="css_circle css_border_base css_margin_left_right font_color_188191193 css_background_color_white">
+                            <div class="css_text_center css_border_bottom">
+
+
+                                <input class='input_base' name="userHostNumber" maxlength="11" ng-keyup="hostNumberKeyup()" ng-model='user.hostNumber' type='text'  placeholder="请输入您的手机号码" autofocus required/>
+                            </div>
+
+
+                            <div class="css_text_center">
+                                <input class='input_base' ng-keyup="passWordKeyup()" name="password" ng-model='user.password' required maxlength="8" placeholder="请输入您的密码" type='password' name='pwd'>
+                            </div>
+                    </div>
+
+                            <div class="button_submit_base css_circle css_background_color_110186078" style="margin-top: 15px;" ng-click='login(user)'> 登录
+                            </div>
+
+
+                    </div>
+
+
+
+                            <div class="css_height_50 css_text_center css_margin_left_right font_color_188191196 font_size_18 css_margin_top150">
+                             <a href='#/register'><span class="font_color_11118779 font_size_16">免费注册</span></a>&nbsp;|&nbsp;<a href='#/findpwd'><span class="font_color_180183188 font_size_16">找回密码</span></a></div>
+
+                    </form>
+</div>
+
+
+

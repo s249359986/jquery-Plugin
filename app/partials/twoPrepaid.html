@@ -1,0 +1,19 @@
+<!--第二号码充值卡充值页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+
+
+<div class="css_border_base">
+    <div class="layout_vertical_inner layout_horizontal_outer css_border_bottom css_text_center css_background_color_white">
+        <input placeholder="请输入11位充值卡密码" class='input_base' maxlength="11" ng-model="user.password" type='password' name='pwd'></div>
+    <div class="layout_vertical_inner layout_horizontal_outer css_text_center css_background_color_white"><input placeholder="请输入验证码" class='input_base' ng-model="user.smscode" type='text' name='code'><div class="css_background_color_117162254" style="padding-right: 5px;" ng-click="ngclickResms()"><img src="{{imgSrc}}" /></div></div>
+</div>
+
+    <div class="button_submit_base css_circle css_background_color_110186078 css_margin_top" ng-click="clickSure(user)">  确认充值  </div>
+
+
+
+</div>
+
+

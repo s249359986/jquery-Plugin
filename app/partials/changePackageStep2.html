@@ -1,0 +1,27 @@
+<!--更换套餐页面2-->
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+
+<div class="win_horizontal_outer win_horizontal_outer_height css_border_base">
+    <div class="layout_horizontal_inner_left">当前套餐</div>
+    <div class="layout_horizontal_inner_right" ng-bind="packageState.currentPackageName"></div></div>
+
+<div class="css_border_base css_margin_top">
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">次月生效套餐</div>
+    <div class="layout_horizontal_inner_right" ng-bind="packageState.nextPackageName"></div>
+</div>
+<div class="win_horizontal_outer win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">生效日期</div>
+    <div class="layout_horizontal_inner_right" ng-bind="packageState.nextPackageTime"></div>
+</div>
+</div>
+
+<div class="css_margin_top">
+<div class="button_submit_base css_circle css_background_color_110186078 css_margin_top" ng-click="clickRemoveReservePackage()">  取消绑定   </div>
+</div>
+</div>
+
+
+
+

@@ -1,0 +1,45 @@
+<!--选择号码页面-->
+<div class="layout_vertical_outer">
+    <div class="win_horizontal_search_outer css_height_50 css_background_color_197196196">
+        <div class="layout_vertical_inner css_height_30 layout_horizontal_outer css_border_base css_text_center css_margin_left_right css_circle css_background_color_white">
+
+        <input class="css_height_30 css_input_width_flex css_input_noborder font_size_B100 search_font_color" ng-model='searchInput.value' placeholder="输入3~8位数字" type="search" />
+            <div class="layout_horizontal_inner_left1_notpadding bg_img_search" ng-click="clickSearchNum()">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="css_border_base">
+        <div ng-click="getSecondNum()" class="win_horizontal_outer win_horizontal_outer_height">
+            <div class="layout_horizontal_inner_left" >{{selectNum.title}}
+                </div>
+            <div class={{selectNum.imgNew}}>{{selectNum.num}}</div>
+        </div>
+    </div>
+
+
+    <div class="css_border_base css_margin_top">
+    <div ng-repeat="numType in numTypes">
+   <!--    <a href='#/numList/{{numType.id}}/{{numType.name}}'>-->
+        <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height css_border_bottom" ng-click="clRq($index)">
+
+            <div class="layout_horizontal_inner_left">
+               {{numType.name}}
+            </div>
+            <div class="right_arrow">
+
+            </div>
+
+        </div>
+     <!--   </a>-->
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+

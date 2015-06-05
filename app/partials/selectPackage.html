@@ -1,0 +1,33 @@
+
+<!--选择套餐页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+    <div class="css_margin_bottom">
+        <div class="css_background_color_white layout_vertical_inner layout_horizontal_outer css_border_bottom css_text_horizontal_center css_height_50 css_border_base  css_text_center">
+            <div class="layout_horizontal_inner_left">已选号码</div>
+            <div class="layout_horizontal_inner_right">{{selectedNum}}</div>
+        </div>
+    </div>
+
+    <div class="css_border_base">
+        <div ng-repeat="packageType in packageTypes">
+            <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+                <div class={{packageType.cls}} ng-click='clSelectPackage($index)'>{{packageType.comboName}}
+                </div>
+
+               <div class="right_arrow" ng-click='clSelectPackageContent($index)'></div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <div class="button_submit_base css_circle css_background_color_110186078 css_margin_left_right css_margin_top" ng-click='clickSure()'> 确认绑定</div>
+</div>
+
+
+
+
+

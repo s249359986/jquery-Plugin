@@ -1,0 +1,187 @@
+/*图片背景样式*/
+
+.bg_img_mybill0
+{
+    background-image: url(../img/myBill0.png);
+    background-repeat: no-repeat;
+    background-size: 30px 22px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_mybill1
+{
+    background-image: url(../img/myBill1.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_more0
+{
+    background-image: url(../img/more0.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_more1
+{
+    background-image: url(../img/more1.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_call0
+{
+    background-image: url(../img/call0.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_call1
+{
+    background-image: url(../img/call1.png);
+    background-repeat: no-repeat;
+    background-size: 28px 21px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:top center;
+
+}
+.bg_img_logo
+{
+    height: 125px;
+    width: 125px;
+    background-image: url(../img/logo.png);
+    background-size: 115px 115px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+.bg_img_back
+{
+    height:40px;
+    width: 68px;
+    background-image: url(../img/back.png);
+    background-size: 30px 20px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:left center;
+    background-repeat: no-repeat;
+}
+.bg_img_binding
+{
+    margin-right:12px;
+    height: 32px;
+    background-image: url(../img/binding.png);
+    background-size: 94px 20px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center right;
+    background-repeat: no-repeat;
+}
+.bg_img_search
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/search.png);
+    background-size: 20px 20px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+/*
+.bg_img_arrow
+{
+    height: 20px;
+    width: 20px;
+    background-image: url(../img/arrow.png);
+    background-size: 16px 23px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+*/
+.bg_img_new
+{
+
+    background-image: url(../img/new.png);
+    background-size: 26px 16px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+.bg_img_return
+{
+
+    background-image: url(../img/return.png);
+    background-size: 10px 18px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:12px center;
+    background-repeat: no-repeat;
+}
+.bg_img_xin1
+{
+
+    background-image: url(../img/xin1.png);
+    background-size: 16px 17px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+.bg_img_jin1
+{
+
+    background-image: url(../img/jin1.png);
+    background-size: 16px 17px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}
+
+.bg_img_lin1
+{
+
+    background-image: url(../img/lin1.png);
+    background-size: 16px 17px;
+    background-origin:padding-box;
+    -moz-background-origin:padding-box;
+    -webkit-background-origin:padding-box;
+    background-position:center center;
+    background-repeat: no-repeat;
+}

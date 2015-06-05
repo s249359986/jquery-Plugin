@@ -1,0 +1,210 @@
+<!doctype html>
+
+<html lang="en" ng-app="myApp"> <!--
+<html>-->
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui" />
+    <meta content="telephone=no" name="format-detection"/>
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="第二号码"/>
+
+    <meta name="keywords" content="第二号码"/>
+
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+
+
+    <title>第二号码</title>
+
+
+    <link rel="stylesheet" href="css/base_no1.css"/>
+    <link rel="stylesheet" href="css/base_font.css"/>
+    <link rel="stylesheet" href="css/base_img.css"/>
+    <link rel="stylesheet" href="css/base_border.css"/>
+    <link rel="stylesheet" href="css/base_validate.css"/>
+    <!--
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+	-->
+<!--验证标签-->
+    <script type="text/javascript" name="baidu-tc-cerfication" src="http://apps.bdimg.com/cloudaapi/lightapp.js#0b70d9649d9cf7190cc439c353c3048a"></script>
+    <script type="text/javascript">window.bd && bd._qdc && bd._qdc.init({app_id: '2dd7d92acd0750ab2e2c3d2a'});</script>
+
+</head>
+
+<!--去掉主高度-->
+<body  ng-controller="bodyController" class="layout_vertical_outer">
+
+<!--<body  ng-controller="bodyController" class="layout_vertical_outer css_height_screen">没有去掉主高度-->
+
+<!--
+<body onload="showLoadMast()">-->
+<div id="loadBodyMastId" class="show_float_body">加载中...</div>
+
+
+
+
+
+<!--代替body的外壳开始
+<div  ng-controller="bodyController" class="layout_vertical_outer css_height_screen" lang="en" ng-app="myApp">
+    代替body的外壳开始-->
+
+
+<div butterbar>加载中...</div>
+
+
+<header class={{navClass.up}}>
+  <!-- <div ng-controller="navController" class="nav css_border_bottom_blue"> -->
+  <div class="main_header main_header_border_bottom">
+
+  <!--
+	<div class="nav_flex css_text_center"><a href='#/{{navUpMessage.leftUrl}}'>{{navUpMessage.leftTitle}}</a></div>
+            <div class="nav_center css_text_center"><a href="#/{{navUpMessage.centerUrl}}">{{navUpMessage.centerTitle}}</a></div>
+			  <div class="nav_flex css_text_center"><a href="#/{{navUpMessage.rightUrl}}">{{navUpMessage.rightTitle}}</a></div>
+				-->
+
+
+		<!--		<div class="nav_up_left css_text_center bg_img_return" ng-click="clickNavUpBack(navUpMessage)">{{navUpMessage.leftTitle}}</div>     -->
+
+
+
+     <div class={{navUpMessage.leftClass}} ng-click="clickNavUpBack(navUpMessage)" ng-bind="navUpMessage.leftTitle"></div>
+
+
+
+      <div class="nav_up_center css_text_center" ng-bind="navUpMessage.centerTitle"></div>
+			  <div class="nav_up_right css_text_center"><a href="#/{{navUpMessage.rightClick}}"><span class="nav_up_right" ng-bind="navUpMessage.rightTitle"></span></a> </div>
+ </div>
+
+
+
+
+
+</header>
+
+
+<div class={{mainBodyMsg.load}}>加载中...</div>
+<!--消息提示框 开始-->
+<div class={{alertMsg.alertClass}}>
+
+<div class="web_alert_circle css_border_base">
+<div class="web_alert_title" ng-bind="alertMsg.titleTitle"></div>
+
+    <div class="web_alert_msg_border_bottom"><div class="web_alert_msg" ng-bind="alertMsg.msgTitle"></div></div>
+    <div class="web_alert_button_outer"><div class={{alertMsg.okClass}} ng-click="clickAlertOk()" ng-bind="alertMsg.okTitle"></div><div class={{alertMsg.noClass}} ng-click="clickAlertNo()" ng-bind="alertMsg.noTitle"></div></div>
+</div>
+</div>
+<!--消息提示框 结束-->
+
+
+
+
+        <div ng-view class="main_body">
+
+
+        </div>
+
+	<footer class={{navClass.down}}>
+	 <div class="nav main_footer_border_top css_height_50 css_background_color_247247247 css_padding_top5" style="font-size:12px;">
+
+	   <!--动态导航
+	     <div class="nav_flex css_text_center "><a href='#/{{navMessage.leftUrl}}'>{{navMessage.leftTitle}}</a></div>
+            <div class="nav_center css_text_center"><a href="#/{{navMessage.centerUrl}}">{{navMessage.centerTitle}}</a></div>
+			  <div class="nav_flex css_text_center"><a href="#/{{navMessage.rightUrl}}">{{navMessage.rightTitle}}</a></div>
+
+			  -->
+         <!--静态导航  a标签
+           <div class="nav_flex css_text_bottom_center bg_img_mybill0"><a href='#/myBill'>我的二号</a></div>
+         <div class="nav_center css_text_bottom_center bg_img_call0"><a href="#/callNum">拨号</a></div>
+         <div class="nav_flex css_text_bottom_center bg_img_more0"><a href="#/more">更多</a></div>
+             -->
+         <div class={{navClass.downLeft}} ng-click="clickNavDownLeft()" style="font-size: 12px;">我的二号</div>
+         <div class={{navClass.downCenter}} ng-click="clickNavDownCenter()" style="font-size: 12px;">&nbsp;拨号&nbsp;</div>
+         <div class={{navClass.downRight}} ng-click="clickNavDownRight()" style="font-size: 12px;">&nbsp;更多&nbsp;</div>
+	   
+    </div>
+	</footer>
+
+
+    <!--代替body的外壳结束
+    </div>
+代替body的外壳结束-->
+<script src="lib/angular/angular.min.js"></script>
+<script src="lib/angular/angular-route.min.js"></script>
+<script src="lib/angular/angular-cookies.min.js"></script>
+<script src="lib/angular/angular-mocks.js"></script>
+<script src="lib/angular/angular-touch.min.js"></script>
+
+<script src="js/ui-bootstrap-tpls-0.10.0.min.js"></script>
+<script src="js/app.js"></script>
+<!--<script src="js/services.js"></script>-->
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/auth-service.js"></script>
+
+<!--
+<script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+-->
+<!--
+<script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+-->
+
+
+
+
+
+<script>
+
+/*
+*提示程序加载中的页面
+*
+*
+* */
+
+
+    angular.element(document).ready(function() {
+
+        (function(){
+
+            function closeLoadMast()
+            {
+                var dom=document.getElementById("loadBodyMastId");
+                dom.className="hide";
+            }
+
+            window.setTimeout(closeLoadMast(),4000);
+
+        })();
+    });
+
+
+
+
+    //百度统计js
+    //  var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    // document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3Ff8999926ffc1bd1d0def4507e93eba75' type='text/javascript'%3E%3C/script%3E"));
+
+
+</script>
+
+</body>
+<div style="display:none;">
+
+
+
+
+</div>
+
+
+
+</html>
+
+
+
+<!--web应用首页-->

@@ -1,0 +1,74 @@
+/* app css stylesheet */
+
+.menu {
+    list-style: none;
+    border-bottom: 0.1em solid black;
+    margin-bottom: 2em;
+    padding: 0 0 0.5em;
+}
+
+.menu:before {
+    content: "[";
+}
+
+.menu:after {
+    content: "]";
+}
+
+.menu > li {
+    display: inline;
+}
+
+.menu > li:before {
+    content: "|";
+    padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+    content: "";
+    padding: 0;
+}
+
+.layout_leftright {
+    position: relative
+}
+
+.layout_leftright {
+    position: relative
+}
+
+.layout_leftright .leftpanel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 199px;
+    margin-left: 0;
+    border-right: 1px solid #e1e1e1;
+    background: #f9f9f7;
+    -webkit-box-shadow: 0 0 3px #eee, inset 0 0 3px #fff;
+    box-shadow: 0 0 3px #eee, inset 0 0 3px #fff
+}
+
+.layout_leftright .leftpanel.collapse {
+    position: absolute;
+    width: 20px;
+    overflow: hidden;
+    left: 0;
+    background: #ff0
+}
+
+.layout_leftright .leftpanel.expand {
+    position: relative
+}
+
+.layout_leftright .leftpanel .switch {
+    position: relative;
+    width: 10px;
+    overflow: hidden;
+    right: 0;
+    background: #ff0
+}
+
+.layout_leftright .rightpanel {
+    margin-left: 200px
+}

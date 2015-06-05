@@ -1,0 +1,105 @@
+<!--我的二号页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+
+<div class="css_background_color_white css_border_base">
+
+
+   <!--为正式版先上线临时注释-->
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">我的第二号</div>
+    <div class="layout_horizontal_inner_right_witharrow myBill_right_font_size" ng-click="clickSecondNum()">{{userMessage.bindNumber}}</div>
+    <div style="height: 22px;width:17px;"><img style="height: 14px;width: 9px;" src="img/arrow.png"/></div>
+</div>
+
+
+    <!--临时添加开始
+    <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+        <div class="layout_horizontal_inner_left">我的第二号</div>
+        <div class="layout_horizontal_inner_right myBill_right_font_size">{{userMessage.bindNumber}}</div>
+
+    </div>
+
+临时添加结束-->
+
+
+
+
+
+
+
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">号码状态</div>
+    <div class="layout_horizontal_inner_right myBill_right_font_size">{{userMessage.bindNumberStatusName}}</div>
+</div>
+
+
+<div class="win_horizontal_outer win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">手机号码</div>
+    <div class="layout_horizontal_inner_right myBill_right_font_size">{{userMessage.hostNumber}}</div></div>
+</div>
+
+
+<div class="css_margin_top css_background_color_white css_border_base">
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">账户余额</div>
+    <div class="layout_horizontal_inner_right" ng-click="clAccountPrepaid()">
+   <!-- <a href="#/accountPrepaid">-->
+        <span class="css_background_color_111187079 circle_prepaid">账户充值</span>
+ <!--   </a>-->
+</div>
+</div>
+
+<div class="layout_vertical_inner layout_horizontal_outer css_text_horizontal_center css_text_center">
+    <div class=" css_border_right win_horizontal_outer_height win myBill_right_font_size">{{userMessage.balance}}元</div>
+    <div class=" css_border_right win_horizontal_outer_height win myBill_right_font_size">{{userMessage.jifen}}铜板</div>
+
+
+
+    <div class={{userMessage.hClass}}>
+    <div class=" css_border_right win_horizontal_outer_height win myBill_right_font_size">{{userMessage.talkTimeRemain}}分钟</div>
+    </div>
+
+
+
+<div class={{userMessage.fClass}}>
+    <div class=" css_border_right win_horizontal_outer_height win myBill_right_font_size">{{userMessage.talkTimeRemainCaller}}分钟<br>&nbsp;(拨打)</div>
+    <div class=" css_border_right win_horizontal_outer_height win myBill_right_font_size">{{userMessage.talkTimeRemainCalled}}分钟<br>&nbsp;(接听)</div>
+</div>
+
+
+
+    </div>
+</div>
+<div class={{isHaveNum}}>
+
+
+
+<!--为正式版先上线临时注释-->
+<div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">我的套餐</div>
+    <div class="layout_horizontal_inner_right_witharrow myBill_right_font_size" ng-click="clickChangePackage()">{{userMessage.comboName}}</div>
+    <div style="height: 22px;width:17px;"><img style="height: 14px;width: 9px;" src="img/arrow.png"/></div>
+</div>
+
+
+    <!--临时添加开始
+    <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+        <div class="layout_horizontal_inner_left">我的套餐</div>
+        <div class="layout_horizontal_inner_right myBill_right_font_size">{{userMessage.comboName}}</div>
+
+    </div>
+
+ 临时添加结束-->
+
+
+
+<div class="win_horizontal_outer win_horizontal_outer_height">
+    <div class="layout_horizontal_inner_left">续费日期</div>
+    <div class="layout_horizontal_inner_right myBill_right_font_size">{{userMessage.nextRechargeTime}}</div></div>
+</div>
+</div>
+
+
+

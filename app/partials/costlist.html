@@ -1,0 +1,28 @@
+<!--demo页-->
+
+<div>
+    <table class="table table-bordered table-hover">
+        <thead>
+        <tr>
+            <th>id</th>
+            <th>类别</th>
+            <th>时间</th>
+            <th>实账户</th>
+            <th>虚账户</th>
+            <th>备注</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="log in balanceLogs">
+            <td>{{log.id}}</td>
+            <td>{{log.logType | balanceLogType}}</td>
+            <td>{{log.dateTime | date: 'yyyy-MM-dd HH:mm:ss'}}</td>
+            <td>{{log.realCost/100 | number:2}}</td>
+            <td>{{log.virtualCost/100 | number:2}}</td>
+            <td>{{log.messgae}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <pagination total-items="recordCount" page="pageNumber" items-per-page="pageSize" class="pagination-sm"
+                boundary-links="true" on-select-page="refreshData(page)"></pagination>
+</div>

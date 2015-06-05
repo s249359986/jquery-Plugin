@@ -23,7 +23,7 @@
         var settings = $.extend({}, selectpick_config, options);
 
         return this.each(function (elem_id) {
-            debugger;
+
             var obj = this;
             var _offset = $(this).offset();
             var top = _offset.top + $(document).scrollTop();

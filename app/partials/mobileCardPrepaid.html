@@ -1,0 +1,26 @@
+
+<!--手机充值卡充值页面-->
+
+<div class="css_margin_topToheader"></div><!--填充层-->
+<div class="layout_vertical_outer">
+
+    <div class="css_background_color_white layout_vertical_inner layout_horizontal_outer css_text_horizontal_center css_text_center mobileCard_circle_title_outer css_margin_left_right">
+        <div ng-click="clickYd()" class={{cardType.YDClass}}>{{cardType.YDCard}}</div>
+        <div ng-click="clickLt()" class={{cardType.LTClass}}>{{cardType.LTCard}}</div>
+        <div ng-click="clickDx()" class={{cardType.DXClass}}>{{cardType.DXCard}}</div>
+    </div>
+
+   <div class="css_border_base css_background_color_white css_margin_top">
+    <div ng-repeat="num in prepaidTypes">
+        <div class="win_horizontal_outer css_border_bottom win_horizontal_outer_height">
+            <div class="layout_horizontal_inner_left">{{num.price}}&nbsp;&nbsp;{{num.shortBenefit}}</div><div class="right_arrow"></div>
+        </div>
+
+    </div>
+   </div>
+
+
+</div>
+
+
+
