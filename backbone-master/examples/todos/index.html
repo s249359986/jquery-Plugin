@@ -16,11 +16,19 @@
       <input id="new-todo" type="text" placeholder="What needs to be done?">
     </header>
 
+
+
+
+
     <section id="main">
       <input id="toggle-all" type="checkbox">
       <label for="toggle-all">Mark all as complete</label>
       <ul id="todo-list"></ul>
     </section>
+
+
+
+
 
     <footer>
       <a id="clear-completed">Clear completed</a>
@@ -28,6 +36,12 @@
     </footer>
 
   </div>
+
+
+
+
+
+
 
   <div id="instructions">
     Double-click to edit a todo.
@@ -49,6 +63,10 @@
 
   <!-- Templates -->
 
+
+
+
+
   <script type="text/template" id="item-template">
     <div class="view">
       <input class="toggle" type="checkbox" <%= done ? 'checked="checked"' : '' %> />
@@ -57,6 +75,13 @@
     </div>
     <input class="edit" type="text" value="<%- title %>" />
   </script>
+
+
+
+
+
+
+
 
   <script type="text/template" id="stats-template">
     <% if (done) { %>

@@ -74,6 +74,8 @@ $(function(){
 
     //... is a list tag.
     tagName:  "li",
+    //  el:"li",
+     // className:"ul",
 
     // Cache the template function for a single item.
     template: _.template($('#item-template').html()),
@@ -91,12 +93,15 @@ $(function(){
     // a one-to-one correspondence between a **Todo** and a **TodoView** in this
     // app, we set a direct reference on the model for convenience.
     initialize: function() {
+
       this.listenTo(this.model, 'change', this.render);
       this.listenTo(this.model, 'destroy', this.remove);
     },
 
     // Re-render the titles of the todo item.
     render: function() {
+      //  debugger;
+
       this.$el.html(this.template(this.model.toJSON()));
       this.$el.toggleClass('done', this.model.get('done'));
       this.input = this.$('.edit');
@@ -127,11 +132,18 @@ $(function(){
 
     // If you hit `enter`, we're through editing the item.
     updateOnEnter: function(e) {
+
+
+
       if (e.keyCode == 13) this.close();
+
+
     },
 
     // Remove the item, destroy the model.
     clear: function() {
+
+debugger;
       this.model.destroy();
     }
 
@@ -161,6 +173,7 @@ $(function(){
     // collection, when items are added or changed. Kick things off by
     // loading any preexisting todos that might be saved in *localStorage*.
     initialize: function() {
+
 
       this.input = this.$("#new-todo");
       this.allCheckbox = this.$("#toggle-all")[0];
@@ -196,6 +209,7 @@ $(function(){
     // Add a single todo item to the list by creating a view for it, and
     // appending its element to the `<ul>`.
     addOne: function(todo) {
+
       var view = new TodoView({model: todo});
       this.$("#todo-list").append(view.render().el);
     },
@@ -217,6 +231,7 @@ $(function(){
 
     // Clear all done todo items, destroying their models.
     clearCompleted: function() {
+
       _.invoke(Todos.done(), 'destroy');
       return false;
     },

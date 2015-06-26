@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">
+
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf8" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+
+    <!-- DataTables -->
+    <script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>
+
+</head>
+<body>
+
+<table cellpadding="0" cellspacing="0" border="0" class="display" id="example"></table>
+<script type="text/javascript">
+
+
+    $(document).ready( function () {
+        var data=[
+                {
+                    "name":       "Tiger Nixon",
+                    "position":   "System Architect",
+                    "salary":     "$3,120",
+                    "start_date": "2011/04/25",
+                    "office":     "Edinburgh",
+                    "extn":       "5421"
+                },
+                {
+                    "name":       "Garrett Winters",
+                    "position":   "Director",
+                    "salary":     "$5,300",
+                    "start_date": "2011/07/25",
+                    "office":     "Edinburgh",
+                    "extn":       "8422"
+                }
+                ];
+
+        $('#example').DataTable({
+            data:data,
+            columns: [
+                { data: 'name' },
+                { data: 'position' },
+                { data: 'salary' },
+                { data: 'office' }
+            ],
+            paging: false
+        });
+    } );
+</script>
+
+</body>
+</html>

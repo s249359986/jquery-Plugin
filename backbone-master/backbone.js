@@ -153,7 +153,7 @@
 
 
   var Events = Backbone.Events = {};
-  //  debugger;
+
 
 //    var Events = {};
 //
@@ -445,7 +445,7 @@
     if (options.parse) attrs = this.parse(attrs, options) || {};
 
 
-      debugger;
+
     attrs = _.defaults({}, attrs, _.result(this, 'defaults'));
     this.set(attrs, options);
     this.changed = {};
@@ -509,7 +509,7 @@
     // the core primitive operation of a model, updating the data and notifying
     // anyone who needs to know about the change in state. The heart of the beast.
     set: function(key, val, options) {
-        debugger;
+
       if (key == null) return this;
 
       // Handle both `"key", value` and `{key: value}` -style arguments.
@@ -1871,7 +1871,7 @@
   // Similar to `goog.inherits`, but uses a hash of prototype properties and
   // class properties to be extended.
   var extend = function(protoProps, staticProps) {
-      debugger;
+
     var parent = this;
     var child;
 
@@ -1888,7 +1888,7 @@
       child = function(){
           //arguments为构造函数参数
 
-      debugger;
+
           return parent.apply(this, arguments);
       };
 
