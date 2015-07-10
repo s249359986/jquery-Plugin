@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="http://backbonejs.org" />
+    <title>Backbone.js</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <!--<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">-->
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>-->
+
+</head>
+<body>
+
+<div class="container-fluid">
+    <div id="footer" class="row"></div>
+    <div class="row">
+
+        <div id="center" class="col-md-12"></div>
+
+    </div>
+
+    <div id="header" class="row"></div>
+</div>
+<script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/backbone.js/1.2.1/backbone-min.js"></script>
+<script>
+    // Set up the "play" buttons for each runnable code example.
+    $(function() {
+        var data={
+            name:"b1"
+        };
+
+        jQuery.ajax({
+            //  url: 'https://leancloud.cn/1.1/classes/soundImage?where={"sound":{"__type":"Pointer","className":"sound","objectId":"54b4d934e4b06e1f628fe884"}}',
+            url: 'https://leancloud.cn/1.1/classes/a3',
+            type: "post",
+            data:JSON.stringify(data),
+
+            // data: {'cql':'select include user,* from userScore where round=1 and user=pointer("_User","'+params.uid+'")'},
+          //  data: {'awardId':opt.awardId,'phone':opt.phone,userId:opt.uId,password:opt.password},
+            headers: {
+                "X-AVOSCloud-Application-Id":"tyav1kfd53xngeu7il40whgtjx467h3mlqo8vvw7tk4zxar3",
+                "X-AVOSCloud-Application-Key": "2er61mzrbglvsx4nigsuenlq5curo1h7474kj67ak4cp96jn",
+                "Content-Type":"application/json"
+                //"content-length": body.length,
+                //"IF-MATCH": itemMetadata.etag,
+                //  "X-HTTP-Method": "MERGE"
+            },
+            success:function(data){
+                debugger;
+            },
+            error:function(data,error)
+            {
+              //  debugger;
+
+
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+        var AppRouter = Backbone.Router.extend({
+
+            routes: {
+                "apps":"apps",
+                "*actions" : "defaultRoute"
+            },
+            apps:function(a1){
+                var h='<div style="border: 1px red solid;" class="col-md-4"><a href="data.html">应用1</a></div><div style="border: 1px red solid;" class="col-md-4">应用2</div><div style="border: 1px red solid;" class="col-md-4">应用3</div>';
+                $("#center").append(h);
+            },
+            defaultRoute: function( route, action ){
+
+            }
+
+        });
+
+        var app_router = new AppRouter;
+        Backbone.history.start();
+        app_router.navigate("/apps", {trigger: true, replace: true});
+
+    });
+</script>
+
+</body>
+</html>

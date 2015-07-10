@@ -1,0 +1,445 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="canonical" href="http://backbonejs.org" />
+    <title>Backbone.js</title>
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+
+    <!--<link href="//cdn.bootcss.com/bootstrap/2.3.2/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">-->
+
+
+    <link href="lib/dist/css/bootstrap.css" rel="stylesheet">
+
+
+
+    <!--<link href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css" rel="stylesheet">-->
+
+
+    <link rel="stylesheet" href="lib/SlickGrid-master/slick.grid.css">
+
+    <link rel="stylesheet" href="lib/SlickGrid-master/slick-default-theme.css">
+    <link rel="stylesheet" href="lib/SlickGrid-master/plugins/slick.headermenu.css" type="text/css"/>
+
+    <link rel="stylesheet" href="lib/SlickGrid-master/controls/slick.columnpicker.css" type="text/css"/>
+    <!--<link rel="stylesheet" type="text/css" href="http://cdn.datatables.net/1.10.7/css/jquery.dataTables.css">-->
+
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+
+
+
+
+    <!--<link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">-->
+
+
+
+    <script src="lib/SlickGrid-master/lib/firebugx.js"></script>
+
+
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+
+
+
+
+
+    <!--<script src="lib/SlickGrid-master/lib/jquery-1.7.min.js"></script>-->
+
+    <script src="js/bwConfig.js"></script>
+
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <script src="lib/SlickGrid-master/lib/jquery.event.drag-2.2.js"></script>
+    <script src="lib/SlickGrid-master/slick.core.js"></script>
+
+    <script src="lib/SlickGrid-master/plugins/slick.checkboxselectcolumn.js"></script>
+
+    <script src="lib/SlickGrid-master/plugins/slick.autotooltips.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.cellrangedecorator.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.cellrangeselector.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.cellcopymanager.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.cellselectionmodel.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.rowselectionmodel.js"></script>
+    <script src="lib/SlickGrid-master/controls/slick.columnpicker.js"></script>
+
+
+
+
+
+
+
+    <script src="lib/SlickGrid-master/slick.formatters.js"></script>
+    <script src="lib/SlickGrid-master/slick.editors.js"></script>
+
+
+    <script src="lib/SlickGrid-master/slick.grid.js"></script>
+    <script src="lib/SlickGrid-master/plugins/slick.headermenu.js"></script>
+    <script src="js/bwAll.js"></script>
+
+    <!--<script src="js/bwDatagrid.js"></script>-->
+
+
+    <!--<script type="text/javascript" charset="utf8" src="http://cdn.datatables.net/1.10.7/js/jquery.dataTables.js"></script>-->
+
+</head>
+
+<style>
+/*
+兼容bootstrap
+
+*/
+    .slick-header-column.ui-state-default
+    {
+        height: 26px;
+
+    }
+
+
+
+
+
+ /*
+    slickgrid头部菜单开始
+ */
+
+.slick-header-menu {
+    border: 1px solid #718BB7;
+    background: #f0f0f0;
+    padding: 2px;
+    -moz-box-shadow: 2px 2px 2px silver;
+    -webkit-box-shadow: 2px 2px 2px silver;
+    min-width: 100px;
+    z-index: 20;
+}
+
+
+.slick-header-menuitem {
+    padding: 2px 4px;
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.slick-header-menuitem:hover {
+    border-color: silver;
+    background: white;
+}
+
+.slick-header-menuitem-disabled {
+    border-color: transparent !important;
+    background: inherit !important;
+}
+
+.icon-help {
+    background-image: url(../images/help.png);
+}
+
+/*
+slickgrid头部菜单结束
+*/
+
+</style>
+
+<body>
+
+
+<!-- Button trigger modal -->
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--Launch demo modal-->
+<!--</button>-->
+
+<!-- 创建class modal开始 -->
+<div class="modal fade" id="createClazzModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">创建Class</h4>
+            </div>
+            <div class="modal-body">
+                <input type="text" class="form-control" id="inputClazzName" placeholder="class">
+                 class名称只能包含字母,数字,下划线,必须以字母开头
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">创建 class</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 创建class modal 结束 -->
+
+
+
+
+
+<!-- 添加列 modal开始 -->
+<div class="modal fade" id="createColumnModal" tabindex="-1" role="dialog" aria-labelledby="createColumnModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="createColumnModalLabel">添加列</h4>
+            </div>
+
+
+
+                <div class="modal-body form-horizontal">
+                    <p class="text-error">
+                    </p>
+                    <div class="form-group">
+                        <label for="form-data-col-add-name" class="col-sm-2 control-label">列名称</label>
+                        <div class="col-sm-10">
+                            <input id="form-data-col-add-name" class="form-control  ng-pristine ng-valid" type="text" name="newColumnName" placeholder="Column Name" ng-model="newColumnName">
+                            <p class="help-block ng-scope" translate="DATA_ADD_COLUMN_TIP">只能包含字母、数字、下划线，必须以字母或数字开头</p>
+                        </div>
+
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-data-col-add-type" class="col-sm-2 control-label"> 列类型</label>
+                        <div class="col-sm-10">
+                            <select id="form-data-col-add-type" class="form-control" name="columnType"><option value="0" selected="selected">String</option><option value="1">Number</option><option value="2">Boolean</option><option value="3">Date</option><option value="4">File</option><option value="5">Array</option><option value="6">Object</option><option value="7">GeoPoint</option><option value="8">Pointer</option><option value="9">Relation</option><option value="10">Any</option></select>
+
+
+                            <!--<select id="form-data-col-add-type" class="form-control  ng-pristine ng-valid" name="columnType" ng-model="newColumnType" ng-options="ty    for ty in fieldTypes" ng-init="newColumnType=fieldTypes[0]"><option value="0" selected="selected">String</option><option value="1">Number</option><option value="2">Boolean</option><option value="3">Date</option><option value="4">File</option><option value="5">Array</option><option value="6">Object</option><option value="7">GeoPoint</option><option value="8">Pointer</option><option value="9">Relation</option><option value="10">Any</option></select>-->
+
+
+
+
+                        </div>
+                    </div>
+
+                    <div class="form-group ng-hide" ng-show="newColumnType=='Pointer'||newColumnType=='Relation'">
+                        <label for="form-data-col-add-relation-name" class="col-sm-2 control-label"> 关联类名称 </label>
+                        <div class="col-sm-10">
+                            <select id="form-data-col-add-relation-name" class="form-control  ng-pristine ng-valid" ng-model="newColumnRelCla" ng-options="v.name as v.name    for (k,v) in datas.clas"><option value="" class="">
+                                Target Class
+                            </option><option value="0">_File</option><option value="1">_Followee</option><option value="2">_Follower</option><option value="3">_Installation</option><option value="4">_Notification</option><option value="5">_Role</option><option value="6">_User</option><option value="7">a1</option><option value="8">a2</option></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-data-col-add-default-value" class="col-sm-2 control-label"> 默认值 </label>
+                        <div class="col-sm-10">
+                            <input id="form-data-col-add-default-value" type="text" class="form-control ng-pristine ng-valid" ng-model="columnDefault">
+                        </div>
+
+                    </div>
+                    <div class="form-group ng-hide" ng-show="newColumnType == 'Number' ">
+                        <label class="col-sm-2 control-label">    </label>
+                        <div class="col-sm-10">
+                            <div class="checkbox custom-control" style="margin-top: 0;">
+                                <label>
+                                    <input type="checkbox" ng-model="columnIncrement" class="ng-pristine ng-valid">
+                                    <span class="control-indicator"></span>
+                                    自增
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="form-data-col-add-comment" class="col-sm-2 control-label"> 列注释 </label>
+                        <div class="col-sm-10">
+                            <input id="form-data-col-add-comment" type="text" class="form-control ng-pristine ng-valid" ng-model="columnComment">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2">  权限</label>
+                        <div class="col-sm-10">
+
+                            <div class="checkbox custom-control">
+                                <label>
+                                    <input type="checkbox" ng-model="read_only" class="ng-pristine ng-valid">
+                                    <span class="control-indicator"></span>
+                                    只读
+                                </label>
+                            </div>
+                            <div class="checkbox custom-control ng-hide" ng-show="currentCla.name=='_User'">
+                                <label>
+                                    <input type="checkbox" ng-model="user_private" class="ng-pristine ng-valid">
+                                    <span class="control-indicator"></span>
+                                    只限当前用户读写
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2"> 其他</label>
+                        <div class="col-sm-10">
+                            <div class="custom-form-inline custom-form-horizontal-form">
+                                <div class="checkbox custom-control">
+                                    <label>
+                                        <input type="checkbox" ng-model="columnRequired" class="ng-pristine ng-valid">
+                                        <span class="control-indicator"></span>
+                                        必填项
+                                    </label>
+                                </div>
+                                <div class="checkbox custom-control">
+                                    <label>
+                                        <input type="checkbox" ng-model="columnHidden" class="ng-pristine ng-valid">
+                                        <span class="control-indicator"></span>
+                                        客户端不可见
+                                    </label>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" onclick="bwConfig.bwMenuBtn.addColumn()" class="btn btn-primary">创建</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 添加列 modal 结束 -->
+
+
+
+
+<!--删除列 modal开始-->
+<div class="modal fade" id="deleteColumn" tabindex="-1" role="dialog" aria-labelledby="createColumnModalLabel">
+<!--<div id="deleteColumn" class="modal top am-fade" style="display: block;">-->
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×
+                </button>
+                <h4 class="modal-title">
+                    刪除列
+                </h4>
+            </div>
+            <div class="modal-body">
+                <select class="form-control" ng-model="delColumnName"><option value="ACL">ACL</option><option value="createdAt">createdAt</option><option value="name" selected="selected">name</option><option value="objectId">objectId</option><option value="updatedAt">updatedAt</option></select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default ng-scope" data-dismiss="modal" translate="ACTION_CANCEL">关闭</button>
+                <button type="submit" class="btn btn-primary ng-scope" translate="ACTION_DELETE">删除</button>
+            </div>
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<!--删除列 modal结束-->
+
+
+
+
+
+
+<div class="container-fluid">
+    <div id="footer" class="row"></div>
+    <div class="row">
+
+        <div id="left" style="border:1px #008000 solid;" class="col-md-2"></div>
+
+        <div id="right" style="border:1px #008000 solid;" class="col-md-10"></div>
+
+    </div>
+
+    <div id="header" class="row"></div>
+</div>
+
+
+
+<!--<script src="test/vendor/underscore.js"></script>-->
+<!--<script src="test/vendor/jquery.js"></script>-->
+<!--<script src="docs/js/jquery.lazyload.js"></script>-->
+<!--<script src="test/vendor/json2.js"></script>-->
+<!--<script src="backbone.js"></script>-->
+
+
+
+<script src="//cdn.bootcss.com/underscore.js/1.8.3/underscore-min.js"></script>
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="//cdn.bootcss.com/backbone.js/1.2.1/backbone-min.js"></script>
+<script>
+    // Set up the "play" buttons for each runnable code example.
+    $(function() {
+
+
+
+
+
+
+
+        var AppRouter = Backbone.Router.extend({
+
+            routes: {
+                "data/:id":"data",
+
+                "posts/:id" : "getPost",
+                //下面对应的链接为<a href="#/download/user/images/hey.gif">download gif</a>
+                "download/*path": "downloadFile",
+                //下面对应的链接为<a href="#/dashboard/graph">Load Route/Action View</a>
+                ":route/:action": "loadView",
+                "*actions" : "defaultRoute"
+            },
+            data:function(id){
+                bwConfig.bwRouterVal.clazzName=id;
+                $("#right").load("partials/data.html",function(){
+                    bwConfig.bwDatagrid.initDataGrid();
+                });
+              //  bwConfig.bwDatagrid.initDataGrid();
+
+            },
+
+            getPost: function(id) {
+
+            },
+
+            defaultRoute : function(actions){
+
+            },
+
+            downloadFile: function( path ){
+
+            },
+
+            loadView: function( route, action ){
+
+
+            }
+
+        });
+
+        var app_router=new AppRouter();
+
+
+        Backbone.history.start();
+        app_router.navigate("/posts/" + 404, {trigger: true, replace: true});
+
+
+
+        $("#left").load("partials/clazzMenu.html",function(){
+            bwConfig.bwClazzMenu.initMenu();
+        });
+
+
+
+    });
+</script>
+
+</body>
+</html>

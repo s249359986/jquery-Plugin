@@ -1,0 +1,51 @@
+
+<div class="container-fluid">
+
+
+    <div class="row">
+
+        <div style="border:1px #008000 solid;" class="col-md-8">
+          数据
+
+        </div>
+
+
+            <div class="dropdown">
+                <a class="dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    设置
+                    <span class="caret"></span>
+                </a>
+
+
+
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                    <li><a data-toggle="modal" data-target="#createClazzModal">创建
+                    </a></li>
+                    <li><a href="#">数据导入</a></li>
+
+                </ul>
+            </div>
+
+
+
+
+
+
+
+
+    </div>
+    <div class="row">
+
+        <input type="text" id="searchText" onkeyup="bwConfig.bwClazzMenu.filterClazzMenu()" class="form-control"  placeholder="class Name">
+
+    </div>
+
+
+    <div class="row">
+
+        <div id="classMenu"></div>
+    </div>
+
+
+</div>
